@@ -32,3 +32,7 @@ Route::get('/about', function () {
 Route::get('/detailmenu', function () {
     return view('detailmenu');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
