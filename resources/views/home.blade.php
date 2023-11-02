@@ -31,13 +31,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link"href="#">Home</a>
+                        <a class="nav-link"href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="/menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -56,7 +56,7 @@
                 <div class="col-md-6">
                     <h1 class="display-4">Welcome To <br> Dapur Marie</h1>
                     <p>Get your delicious food here!</p>
-                    <a class="btn btn-lg" href="#" role="button">Buy Now</a>
+                    <a class="btn btn-lg" href="/detailmenu" role="button">Buy Now</a>
                 </div>
                 <div class="col-md-6 text-center">
                     <div class="img-border">
