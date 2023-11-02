@@ -40,3 +40,7 @@ Route::get('/profile', function () {
 Route::get('/menu', function () {
     return view('menu');
 });
+
+Route::get('/loginadmin', function () {
+    return view('loginadmin');
+});
