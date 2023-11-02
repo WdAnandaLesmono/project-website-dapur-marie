@@ -7,8 +7,13 @@ body {
     background-color: #6B4F4F;
 }
 
+.row{
+    display: flex;
+}
+
 .login-page {
     margin-left: 49px;
+    flex: 1;
 }
 
 .login {
@@ -63,4 +68,12 @@ label {
     margin-left: 49px;
     margin-bottom: 20px;
     text-decoration: none;
+}
+
+.img-logo{
+    display: flex;
+    flex: 1;
+    margin: 80px;
+    justify-content: center;
+    align-items: center;
 }
