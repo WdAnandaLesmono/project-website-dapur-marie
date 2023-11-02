@@ -36,3 +36,7 @@ Route::get('/detailmenu', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/menu', function () {
+    return view('menu');
+});
