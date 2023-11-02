@@ -26,7 +26,7 @@
   <body>
     <!-- Navbar Start-->
     <nav class="navbar navbar-expand-lg sticky-top">
-      <img src="./assets/image/WhatsApp Image 2023-09-26 at 22.18.21.jpeg" />
+      <img src="image/dapur-marie-txt.jpeg" />
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -42,13 +42,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Menu</a>
+              <a class="nav-link" href="/menu">Menu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/about">About</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
