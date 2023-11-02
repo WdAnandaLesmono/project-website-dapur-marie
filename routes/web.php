@@ -32,7 +32,3 @@ Route::get('/about', function () {
 Route::get('/detailmenu', function () {
     return view('detailmenu');
 });
-
-Route::get('/menu', function () {
-    return view('menu');
-});
