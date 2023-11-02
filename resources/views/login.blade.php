@@ -9,24 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login-page">
-        <h1 class="login">Login</h1>
-        <form action="" method="">
-            <label for="email">Email</label><br>
-            <input class="input-user" type="text" id="email" name="email" required><br><br>
-        
-            <label for="password">Password</label><br>
-            <input class="input-user" type="password" id="password" name="password" required><br><br>
+
+
+    <div class="row">
+        <div class="login-page">
+            <h1 class="login">Login</h1>
+            <form action="" method="">
+                <label for="email">Email</label><br>
+                <input class="input-user" type="text" id="email" name="email" required><br><br>
             
-            <input class="btn-login" type="submit" value="Login">
-        </form>
-        <a href="SignUp.html" class="sign-up">Don't have an account? <b>Sign Up</b></a>
+                <label for="password">Password</label><br>
+                <input class="input-user" type="password" id="password" name="password" required><br><br>
+                
+                <input class="btn-login" type="submit" value="Login">
+            </form>
+            <a href="/signup" class="sign-up">Don't have an account? <b>Sign Up</b></a>
+        </div>
+        
+        <div class="img-logo">
+            <img src="/image/logo.png" alt="">
+        </div>
+
     </div>
 
     
-    <div class="img-logo">
-
-    </div>
 
 </body>
 </html>
