@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF3E4;
+}
+
+.navbar {
+    background-color: #6B4F4F;
+    font-family: 'Poppins', sans-serif;
+    height: 80px;
+
+}
+
+i{
+    margin: 20px;
+    color: #FFF3E4;
+}
+
+.navbar h1{
+    font-family: 'Fraunces', serif;
+    color: #FFF3E4;
+    font-size: 45px;
+    margin: 10px;
+}
+
+img{
+    width: 300px;
+    height: 400px;
+}
