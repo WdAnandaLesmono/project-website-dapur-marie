@@ -56,6 +56,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.btn-lg:hover {
+    background-color: #EED6C4;
+    opacity: 75%;
+    color: #6B4F4F; 
+}
+
 .menu {
     color: #6B4F4F;
     text-decoration: underline;
