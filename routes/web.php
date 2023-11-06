@@ -42,9 +42,9 @@ Route::get('/menu', function () {
 });
 
 Route::get('/loginadmin', function () {
-    return view('loginadmin');
+    return view('admin/loginadmin');
 });
 
 Route::get('/orders', function () {
-    return view('orders');
+    return view('admin/orders');
 });

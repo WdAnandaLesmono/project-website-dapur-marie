@@ -8,25 +8,27 @@ body {
     background-color: #FFF3E4;
     font-family: 'Poppins', sans-serif;
 }
-
- .navbar a {
-    color: #1b1917;
-}
-
 .navbar {
-    display: flex;
     font-family: 'Poppins', sans-serif;
 }
 
-.collapse {
-    flex: 1;
-    float: right;
+.navbar a {
+    color: black;
+}
+
+.navbar h5 {
+    color: white;
 }
 
 .navbar a:hover,
 a:active {
     text-decoration: underline;
-    color: #1b1917;
+    color: black;
+}
+
+.navbar img {
+    width: 68px;
+    margin-right: 20px;
 }
 
 #abstract-bg {
@@ -37,24 +39,61 @@ a:active {
     top: 0px;
 }
 
-.search-container {
-    text-align: center;
-    margin: 20px 0;
+.search {
+    display: flex;
+    justify-content: flex-end;
 }
 
-#search {
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #333;
-    border-radius: 5px;
+.btn-search {
+    color: #FFF3E4;
+    background-color: #6B4F4F;
 }
 
-.card {
-    width: 300px;
-    height: 300px;
-    border: 1px solid #ccc;
+.form-control {
+    border: 2px solid #6B4F4F;
+}
+
+.btn-search:hover {
+    color: #FFF3E4;
+    background-color: #6B4F4F;
+}
+
+.container {
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
     z-index: 1;
+    background-color: #EED6C4;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li:nth-child(2) {
+    flex: 1;
+}
+
+.badge {
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid #212121;
+    border-radius: 4px;
+}
+
+.fa {
+    color: #212121;
+}
+
+li span {
+    font-size: 20px;
+}
+
+.card-img {
+    width: 170px;
+    height: 156px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.dashed {
+    border-bottom: 2px dashed #483434;
 }
