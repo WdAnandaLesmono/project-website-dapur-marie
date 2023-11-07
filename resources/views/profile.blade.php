@@ -31,15 +31,36 @@
                 </div>
         </div>
     </nav>
-        <!-- Navbar End -->
+    <!-- Navbar End -->
 
-    <div class="profile">
-        <div class="img-profile">
-            <img src="icon-profile.png" alt="">
-
+    <div class="content">
+        <div class="profile">
+            <div class="img-profile">
+                <img src="image/icon-profile.png" alt="">
+                <div class="username-section">
+                    <h2><b>Username</b></h2>
+                    <button>
+                        Edit Profile
+                    </button>
+                </div>
+            </div>
         </div>
-
+    
+        <table class="table">
+            <tbody>
+              <tr>
+                <th>Charts</th>
+                <th>Orders</th>
+                <th>History</th>
+              </tr>
+            </tbody>
+        </table>
     </div>
+
+
+
+
+
 
 
     
