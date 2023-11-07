@@ -84,3 +84,32 @@ span {
 .badge:hover {
     border: 1px solid black;
 }
+
+.footer {
+    background-color: #483434;
+    padding: 30px;
+}
+
+.footer img {
+    width: 200px;
+}
+
+.footer table {
+    color: #FFF3E4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer th {
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer td {
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.footer h1 {
+    color: #FFF3E4;
+}
