@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF3E4;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+    color: black;
+}
+
+.navbar h5 {
+    color: white;
+}
+
+.navbar a:hover,
+a:active {
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar img {
+    width: 68px;
+    margin-right: 20px;
+}
+
+#abstract-bg {
+    width: 30%;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-search {
+    color: #FFF3E4;
+    background-color: #6B4F4F;
+}
+
+.form-control {
+    border: 2px solid #6B4F4F;
+}
+
+.btn-search:hover {
+    color: #FFF3E4;
+    background-color: #6B4F4F;
+}
+
+.container {
+    border-radius: 5px;
+    z-index: 1;
+    background-color: #EED6C4;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li:nth-child(2) {
+    flex: 1;
+}
+
+.badge {
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid #212121;
+    border-radius: 4px;
+}
+
+.fa {
+    color: #212121;
+}
+
+li span {
+    font-size: 20px;
+}
+
+.card-img {
+    width: 170px;
+    height: 156px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.dashed {
+    border-bottom: 2px dashed #483434;
+}

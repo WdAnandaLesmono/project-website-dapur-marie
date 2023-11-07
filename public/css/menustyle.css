@@ -19,11 +19,16 @@ body {
     color: #FFF3E4;
 }
 
+.navbar a:hover,
+a:active {
+    text-decoration: underline;
+    color: #FFF3E4;
+}
+
 .navbar img {
     width: 68px;
     margin-right: 20px;
 }
-
 .btn-search {
     background-color: #FFF3E4;
     color: #6B4F4F;
