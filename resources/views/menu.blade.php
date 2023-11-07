@@ -17,7 +17,7 @@
         </ul>
         <i class="fa fa-shopping-cart fa-2x"></i>
     </div>
-    <div class="container menu-gallery mt-2">
+    <div class="container menu-gallery mt-2 mb-5">
         <div class="row align-items-center g-5">
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="card border-black" style="width: 18rem">
