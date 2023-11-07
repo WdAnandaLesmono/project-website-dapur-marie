@@ -65,25 +65,23 @@ button {
     height: 40px;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+.btn-group{
+    /* background-color: #6B4F4F; */
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF3E4;
+    display: flex;
+    align-items: center;
+
+
 }
 
-tbody{
-    border-radius: 15px;
+.btn{
+    border: 1px solid #6B4F4F !important;
+    padding: 5px 10px;
+    cursor: pointer;
 }
-.table th {
-    background-color: #FFF3E4;
-    color: #483434;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 2px;
-    border: 3px solid #483434;
-}
-.table td {
-    padding: 10px;
-    text-align: left;
+
+.btn:hover{
+    background-color: #6B4F4F;
+    color: white;
 }
