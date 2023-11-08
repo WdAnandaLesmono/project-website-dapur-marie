@@ -47,14 +47,36 @@
         <div class="row mt-4">
             <div class="ms-5 col-7 ps-5">
                 <span class="d-block">Febi Fiantika | (+62) 612-3456-7898</span>
-                <span class="d-block">Lorem ispan sum dolor, sit amet consectetur adipisicing elit. Harum, tempora. GANGNAM, KAB. BUSAN, SOUTH KOREA, ID 12345</span>
+                <span class="d-block">Lorem ispan sum dolor, sit amet consectetur adipisicing elit. Harum, tempora.
+                    GANGNAM, KAB. BUSAN, SOUTH KOREA, ID 12345</span>
             </div>
         </div>
         <i class="fa fa-arrow-right fa-2x d-flex justify-content-end"></i>
         <div class="dashed mt-3"></div>
     </div>
 
-
+    {{-- Card Start --}}
+    <div class="container col-8 my-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-2" style="padding: 0px">
+                    <img class="card-img" src="image/barongko.jpg" alt="barongko">
+                </div>
+                <div class="col ms-4 my-3">
+                    <div class="row d-flex">
+                        <h5 class="fw-bold">Barongko</h5>
+                        <h5>Rp. 50.000,00</h5>
+                        <small>Selasa, 19 Maret 2023</small>
+                        <br>
+                        <small>19.00 WITA</small>
+                        <h5 class="fw-bold pe-3" style="text-align: end">Rp. 50.000,00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {{-- Card End --}}
 
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
 
