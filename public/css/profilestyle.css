@@ -14,7 +14,7 @@ body {
     height: 80px;
 }
 
-i{
+.container-fluid i{
     margin: 20px;
     color: #FFF3E4;
 }
@@ -65,25 +65,70 @@ button {
     height: 40px;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+.btn-group{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF3E4;
+    display: flex;
+    align-items: center;
+
+
 }
 
-tbody{
-    border-radius: 15px;
+.btn{
+    border: 1px solid #6B4F4F !important;
+    padding: 5px 10px;
+    cursor: pointer;
 }
-.table th {
-    background-color: #FFF3E4;
-    color: #483434;
-    padding: 10px;
-    text-align: center;
+
+.btn:hover{
+    background-color: #6B4F4F;
+    color: white;
+}
+
+.nama-produk{
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 2px;
-    border: 3px solid #483434;
+
 }
-.table td {
-    padding: 10px;
-    text-align: left;
+
+.harga{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.detail-order{
+    margin-top: 20px;
+    background-color: #EED6C4;
+    border-radius: 10px; 
+    height: 120px;
+}
+
+.detail-order img{
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.jumlah-order {
+    margin-top: 40px;
+    margin-left: auto;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.trash-logo{
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.detail-order i{
+    color: #000000;
+    margin: 20px;
+
 }
