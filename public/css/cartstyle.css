@@ -27,3 +27,39 @@ span {
 .dashed {
     border-bottom: 2px dashed #483434;
 }
+
+.container {
+    border-radius: 5px;
+    z-index: 1;
+    background-color: #EED6C4;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li:nth-child(2) {
+    flex: 1;
+}
+
+.badge {
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid #212121;
+    border-radius: 4px;
+}
+
+.fa {
+    color: #212121;
+}
+
+li span {
+    font-size: 20px;
+}
+
+.card-img {
+    width: 170px;
+    height: 156px;
+    object-fit: cover;
+    border-radius: 6px;
+}
