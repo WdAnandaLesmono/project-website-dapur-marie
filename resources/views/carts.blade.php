@@ -56,19 +56,48 @@
     </div>
 
     {{-- Card Start --}}
-    <div class="container col-8 my-5">
-        <div class="card-body">
+    <div class="container container-card col-8 my-5">
+        <div class="card-body mb-3">
+            <div class="col">
+                <div class="quantity mt-3 d-flex align-items-center">
+                    <span id="quantity">Quantity</span>
+                    <a class="badge ms-2" href="#">1x</a>
+                </div>
+                <i class="fa fa-trash fa-2x mt-3"></i>
+            </div>
             <div class="row">
-                <div class="col-2" style="padding: 0px">
+                <div class="col-2">
                     <img class="card-img" src="image/barongko.jpg" alt="barongko">
                 </div>
-                <div class="col ms-4 my-3">
+                <div class="col ms-4 my-3 ms-5">
                     <div class="row d-flex">
                         <h5 class="fw-bold">Barongko</h5>
-                        <h5>Rp. 50.000,00</h5>
-                        <small>Selasa, 19 Maret 2023</small>
-                        <br>
-                        <small>19.00 WITA</small>
+                        <P>Lorem ipsum</P>
+                        <br> <br>
+                        <P>Lorem ipsum dolor sit amet consectetur</P>
+                        <h5 class="fw-bold pe-3" style="text-align: end">Rp. 50.000,00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="col">
+                <div class="quantity mt-3 d-flex align-items-center">
+                    <span id="quantity">Quantity</span>
+                    <a class="badge ms-2" href="#">1x</a>
+                </div>
+                <i class="fa fa-trash fa-2x mt-3"></i>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <img class="card-img" src="image/barongko.jpg" alt="barongko">
+                </div>
+                <div class="col ms-4 my-3 ms-5">
+                    <div class="row d-flex">
+                        <h5 class="fw-bold">Barongko</h5>
+                        <P>Lorem ipsum</P>
+                        <br> <br>
+                        <P>Lorem ipsum dolor sit amet consectetur</P>
                         <h5 class="fw-bold pe-3" style="text-align: end">Rp. 50.000,00</h5>
                     </div>
                 </div>
