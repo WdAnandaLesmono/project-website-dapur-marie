@@ -37,12 +37,18 @@
     <!-- Navbar End -->
 
     <div class="content">
-        <img src="image/icon-profile.png" alt="">
-        <div class="logo">
+        <div class="icon-change">
+            <img src="image/icon-profile.png" alt="">
+            <div class="logo">
+                <i class="fa fa-trash fa-2x"></i>
+                <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
 
-            <i class="fa fa-trash fa-2x"></i>
-            <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
-
+        <div>
+            <button class="btn-edit">Edit Username</button>
+            <button class="btn-edit">Change Password</button>
+            <button class="btn-edit">Delete Account</button>
         </div>
 
 
