@@ -16,8 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/profilestyle.css">
 
-    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
-
 </head>
 <body>
 
@@ -60,7 +58,7 @@
                 <img src="image/barongko.jpg" alt="">
                 <div class="m-4">
                     <h5 class="nama-produk"><b>Barongko</b></h5>
-                    <p class="harga">Rp. 50.000,00</p>
+                    <p class="harga">Rp. 50.000</p>
                 </div>
                 <p class="jumlah-order">1x</p>
                 <div class="trash-logo">

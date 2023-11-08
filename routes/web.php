@@ -48,3 +48,7 @@ Route::get('/loginadmin', function () {
 Route::get('/orders', function () {
     return view('admin/orders');
 });
+
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
