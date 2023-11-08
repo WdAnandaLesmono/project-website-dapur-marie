@@ -56,8 +56,17 @@
         </div>
 
         <div class="detail-order">
-            
-
+            <div class="product-detail">
+                <img src="image/barongko.jpg" alt="">
+                <div class="m-4">
+                    <h5 class="nama-produk"><b>Barongko</b></h5>
+                    <p class="harga">Rp. 50.000,00</p>
+                </div>
+                <p class="jumlah-order">1x</p>
+                <div class="trash-logo">
+                    <i class="fa fa-trash fa-2x"></i>
+                </div>
+            </div>
         </div>
 
 

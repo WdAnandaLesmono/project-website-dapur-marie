@@ -85,3 +85,51 @@ button {
     background-color: #6B4F4F;
     color: white;
 }
+
+.nama-produk{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.harga{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.detail-order{
+    margin-top: 20px;
+    background-color: #EED6C4;
+    border-radius: 10px; 
+    height: 120px;
+}
+
+.detail-order img{
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    /* align-items: column; */
+}
+
+.jumlah-order {
+    margin-top: 40px;
+    margin-left: auto;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.trash-logo{
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.fa .fa-trash{
+    color: #000000;
+
+}
