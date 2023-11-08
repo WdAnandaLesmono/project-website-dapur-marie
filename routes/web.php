@@ -52,3 +52,7 @@ Route::get('/orders', function () {
 Route::get('/editprofile', function () {
     return view('editprofile');
 });
+
+Route::get('/carts', function () {
+    return view('carts');
+});

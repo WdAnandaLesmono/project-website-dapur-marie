@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF3E4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #6B4F4F;
+    height: 80px;
+}
+
+.navbar h1 {
+    color: #FFF3E4;
+    font-size: 45px;
+    margin: 10px;
+}
+
+span {
+    color: black;
+}
+
+.dashed {
+    border-bottom: 2px dashed #483434;
+}
