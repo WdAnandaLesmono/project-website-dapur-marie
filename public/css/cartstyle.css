@@ -28,10 +28,14 @@ span {
     border-bottom: 2px dashed #483434;
 }
 
-.container {
-    border-radius: 5px;
-    z-index: 1;
+/* .container {
     background-color: #EED6C4;
+    z-index: 1;
+} */
+
+.card-body {
+    background-color: #EED6C4;
+    border-radius: 5px;
 }
 
 ul {
@@ -57,9 +61,32 @@ li span {
     font-size: 20px;
 }
 
+.container-card {
+    height: 178px;
+}
+
+.badge {
+    width: 80px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
 .card-img {
     width: 170px;
-    height: 156px;
+    height: 178px;
     object-fit: cover;
     border-radius: 6px;
+}
+
+.fa-trash {
+    position: absolute;
+    right: 20%;
+}
+
+.quantity {
+    position: absolute;
+    right: 32%;
 }
