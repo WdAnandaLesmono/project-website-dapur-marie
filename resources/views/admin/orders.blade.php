@@ -105,7 +105,7 @@
                     <small>19.00 WITA</small>
                 </div>
             </div>
-            <div class="container col-7">
+            <div class="container col-7 ps-3">
                 <span class="d-block">Alamat Pengiriman:</span>
                 <span class="d-block">Febi Fiantika | (+62) 612-3456-7898</span>
                 <span class="d-block">Lorem ispan sum dolor, sit amet consectetur adipisicing elit. Harum, tempora. GANGNAM, KAB. BUSAN, SOUTH KOREA, ID 12345</span>
