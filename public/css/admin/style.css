@@ -49,6 +49,10 @@ a:active {
     background-color: #6B4F4F;
 }
 
+input .form-control{
+    height: 20px;
+}
+
 .form-control {
     border: 2px solid #6B4F4F;
 }
@@ -116,4 +120,33 @@ li span {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.detail-order{
+    margin-top: 20px;
+    border-radius: 10px; 
+    height: 120px;
+}
+
+.detail-order img{
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.product-detail {
+    background-color: #EED6C4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 50px;
+    border-radius: 8px;
+    margin-top: 30px;
+
+}
+
+.detail-order i{
+    color: #000000;
+    margin-right: 30px;
 }
