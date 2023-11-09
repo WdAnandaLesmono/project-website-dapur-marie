@@ -32,7 +32,7 @@ a:active {
 }
 
 #abstract-bg {
-    width: 30%;
+    width: 40%;
     position: absolute;
     z-index: -1;
     left: 0px;
@@ -58,7 +58,7 @@ a:active {
     background-color: #6B4F4F;
 }
 
-.container {
+#card{
     border-radius: 5px;
     z-index: 1;
     background-color: #EED6C4;
@@ -68,11 +68,11 @@ ul {
     list-style-type: none;
 }
 
-li:nth-child(2) {
+.navbar-nav li:nth-child(2) {
     flex: 1;
 }
 
-.badge {
+.list {
     height: fit-content;
     width: fit-content;
     border: 2px solid #212121;
@@ -96,4 +96,24 @@ li span {
 
 .dashed {
     border-bottom: 2px dashed #483434;
+}
+
+.category-menu {
+    width: 80px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.category-menu:hover {
+    border: 1px solid white;
+}
+
+.type {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

@@ -41,12 +41,12 @@ Route::get('/menu', function () {
     return view('menu');
 });
 
-Route::get('/loginadmin', function () {
-    return view('admin/loginadmin');
+Route::get('admin/orders', function () {
+    return view('admin/orders');
 });
 
-Route::get('/orders', function () {
-    return view('admin/orders');
+Route::get('admin/menu', function () {
+    return view('admin/menu');
 });
 
 Route::get('/editprofile', function () {
