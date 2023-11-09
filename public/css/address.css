@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF3E4;
+}
+
+.navbar {
+    background-color: #6B4F4F;
+    font-family: 'Poppins', sans-serif;
+    height: 80px;
+}
+
+.container-fluid i{
+    margin: 20px;
+    color: #FFF3E4;
+}
+
+.navbar h1{
+    font-family: 'Fraunces', serif;
+    color: #FFF3E4;
+    font-size: 45px;
+    margin: 10px;
+}
+
+.form-check{
+    margin: 50px;
+}
+
+.form-check .fa{
+    margin-top: 50px;
+}
+
+.borders{
+    border: 1px dotted rgb(39, 43, 43);
+}
+
+.user-data, .user-address{
+    font-family: 'Poppins', sans-serif;
+
+}
