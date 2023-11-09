@@ -57,6 +57,6 @@ Route::get('/carts', function () {
     return view('carts');
 });
 
-Route::get('/address', function () {
-    return view('address');
+Route::get('/selectaddress', function () {
+    return view('selectaddress');
 });

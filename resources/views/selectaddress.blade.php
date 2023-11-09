@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Poppins&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/address.css">
+    <link rel="stylesheet" href="css/selectaddress.css">
 
 
 </head>
@@ -45,7 +45,7 @@
                     <br>ID 12345
                 </p>
             </label>
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-pencil-square-o fa-2x d-flex justify-content-end" aria-hidden="true"></i>
         </div>
 
         <div class="borders"></div>
@@ -59,7 +59,7 @@
                     <br>ID 12345
                 </p>
             </label>
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-pencil-square-o fa-2x d-flex justify-content-end" aria-hidden="true"></i>
         </div>
 
         <div class="borders"></div>
@@ -73,7 +73,7 @@
                     <br>ID 12345
                 </p>
             </label>
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-pencil-square-o fa-2x d-flex justify-content-end" aria-hidden="true"></i>
         </div>
 
         <div class="borders"></div>
