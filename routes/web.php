@@ -56,3 +56,7 @@ Route::get('/editprofile', function () {
 Route::get('/carts', function () {
     return view('carts');
 });
+
+Route::get('/selectaddress', function () {
+    return view('selectaddress');
+});
