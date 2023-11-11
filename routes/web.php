@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/signup', [SignupController::class, 'index']);
+Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
 });
 

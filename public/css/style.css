@@ -1,9 +1,15 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
+    background-color: #6B4F4F;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
     background-color: #6B4F4F;
 }
 
@@ -17,7 +23,6 @@ body {
 }
 
 .login {
-    font-family: 'Fraunces', serif;
     color: #FFF3E4;
     letter-spacing: 2px;
     margin-top: 79px;
@@ -26,10 +31,19 @@ body {
     font-size: 60px;
 }
 
+.signup {
+    color: #FFF3E4;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 49px;
+    margin-bottom: 39px;
+    font-size: 60px;
+}
+
 .input-user {
-    width: 620px;
-    height: 75px;
-    border-radius: 10px;
+    width: 340px;
+    height: 40px;
+    border-radius: 6px;
     margin-left: 49px;
     margin-top: 10px;
     border: 3px;
@@ -38,7 +52,6 @@ body {
 }
 
 label {
-    font-family: 'Fraunces', serif;
     margin-left: 49px;
     margin-bottom: 100px;
     font-family: 'Poppins', sans-serif;
@@ -66,7 +79,6 @@ label {
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
     margin-left: 49px;
-    margin-bottom: 20px;
     text-decoration: none;
 }
 
@@ -76,4 +88,14 @@ label {
     margin: 80px;
     justify-content: center;
     align-items: center;
+}
+
+img {
+ width: 460px;
+}
+
+.invalid-feedback {
+    margin-left: 49px;
+    color: rgb(223, 8, 8);  
+    font-size: 14px;
 }

@@ -19,7 +19,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/{{ request()->segment(1) == 'about' ? 'aboutstyle.css' : '' }}" />
     <link rel="stylesheet" href="css/{{ request()->segment(1) == 'detailmenu' ? 'detailmenustyle.css' : '' }}" />
-    <link rel="stylesheet" href="css/{{ request()->segment(1) == 'home' ? 'homestyle.css' : '' }}" />
+    <link rel="stylesheet" href="css/{{ request()->segment(1) == '' ? 'homestyle.css' : '' }}" />
     <link rel="stylesheet" href="css/{{ request()->segment(1) == 'menu' ? 'menustyle.css' : '' }}" />
     <link rel="stylesheet" href="css/{{ request()->segment(1) == 'profile' ? 'profilestyle.css' : '' }}" />
     <link rel="stylesheet" href="css/{{ request()->segment(1) == 'order' ? 'orderstyle.css' : '' }}" />
