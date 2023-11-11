@@ -49,6 +49,10 @@ Route::get('admin/menu', function () {
     return view('admin/menu');
 });
 
+Route::get('admin/editmenu', function () {
+    return view('admin/editmenu');
+});
+
 Route::get('/editprofile', function () {
     return view('editprofile');
 });
