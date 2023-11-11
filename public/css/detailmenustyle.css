@@ -15,11 +15,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar a {
+.navbar li a {
     color: #FFF3E4;
 }
 
-.navbar a:hover,
+.navbar li a:hover,
 a:active {
     text-decoration: underline;
     color: #FFF3E4;
@@ -30,18 +30,22 @@ a:active {
     margin-right: 20px;
 }
 
+.btn-login {
+    background-color: #FFF3E4;
+}
+
+.btn-login:hover {
+    opacity: 75%;
+    background-color: #FFF3E4;
+}
+
 #abstract-bg {
     width: 16%;
     position: absolute;
     z-index: -1;
     right: 0px;
     top: 58px;
-}   
-
-.btn-search {
-    background-color: #FFF3E4;
-    color: #6B4F4F;
-}
+}  
 
 .fa-user-circle-o {
     color: #FFF3E4;

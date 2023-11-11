@@ -16,12 +16,14 @@
     <div class="row">
         <div class="login-page">
             <h1 class="login" style="font-family: 'Fraunces', serif;">Login</h1>
-            <form action="" method="">
+            <form action="/login" method="POST">
+                @csrf
                 <label for="email">Email</label><br>
-                <input class="input-user" type="text" id="email" name="email" required><br><br>
+                <input class="input-user" type="text" id="email" name="email" value="{{ old('email') }}"
+                    autofocus required><br><br>
 
                 <label for="password">Password</label><br>
-                <input class="input-user" type="password" id="password" name="password" required><br><br>
+                <input class="input-user" type="password" id="password" name="password" autofocus required><br><br>
 
                 <input class="btn-login" type="submit">
             </form>
@@ -34,7 +36,7 @@
 
     </div>
 
-
+    @include('sweetalert::alert')
 
 </body>
 
