@@ -15,11 +15,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar a {
+.navbar li a {
     color: #FFF3E4;
 }
 
-.navbar a:hover,
+.navbar li a:hover,
 a:active {
     text-decoration: underline;
     color: #FFF3E4;
@@ -29,9 +29,14 @@ a:active {
     width: 68px;
     margin-right: 20px;
 }
-.btn-search{
+
+.btn-login{
     background-color: #FFF3E4;
-    color: #6B4F4F;
+}
+
+.btn-login:hover {
+    opacity: 75%;
+    background-color: #FFF3E4;
 }
 
 .jumbotron {

@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/signup', [SignupController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/signup', function () {
@@ -33,7 +36,7 @@ Route::get('/about', function () {
 
 Route::get('/detailmenu', function () {
     return view('detailmenu');
-});
+})->middleware('auth');
 
 Route::get('/profile', function () {
     return view('profile');
