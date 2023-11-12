@@ -22,10 +22,6 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
-Route::get('/signup', function () {
-    return view('signup');
-});
-
 Route::get('/', function () {
     return view('home');
 });
