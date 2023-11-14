@@ -14,13 +14,13 @@
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/menu">Menu</a>
+                            <a class="nav-link {{ Request::is('admin/menu') ? 'active fw-700' : '' }}" href="/admin/menu">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/orders">Orders</a>
+                            <a class="nav-link {{ Request::is('admin/orders') ? 'active fw-700' : '' }}" href="/admin/orders">Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/completed">Completed</a>
+                            <a class="nav-link {{ Request::is('admin/completed') ? 'active fw-700' : '' }}" href="/admin/completed">Completed</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/">Logout</a>

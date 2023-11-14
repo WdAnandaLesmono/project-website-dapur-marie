@@ -19,12 +19,12 @@ body {
 .navbar li a {
     color: #FFF3E4;
 }
-
+/* 
 .navbar li a:hover,
 a:active {
     text-decoration: underline;
     color: #FFF3E4;
-}
+} */
 
 .navbar img {
     width: 68px;

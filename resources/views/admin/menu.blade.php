@@ -2,6 +2,9 @@
 
 @section('body')
 
+    <a href="/admin/addmenu" class="act-btn">
+        +
+    </a>
     <div class="container-fluid search px-5 my-4 col">
         <div class="container menu-type p-2 mt-2 mb-4 col">
             <ul class="type me-auto mb-2 mb-lg-0">
@@ -16,7 +19,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <form class="search d-flex" role="search">
             <input class="form-control" type="search" placeholder="Search Menu" aria-label="Search">
             <button class="btn btn-search" type="submit">Search</button>
@@ -71,5 +74,5 @@
         </div>
     </div>
 
-{{-- </div> --}}
+    {{-- </div> --}}
 @endsection
