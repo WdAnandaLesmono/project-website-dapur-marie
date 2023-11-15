@@ -1,0 +1,49 @@
+@extends('admin.layouts.main')
+
+@section('body')
+    <a href="/admin/menu/create" class="act-btn">
+        +
+    </a>
+    <div class="container-fluid search px-5 my-4 col">
+        <div class="container menu-type p-2 mt-2 mb-4 col">
+            <ul class="type me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-4">
+                    <a class="badge category-menu" href="#">All</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="badge category-menu" href="#">Cake</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="badge category-menu" href="#">Snack</a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="search d-flex" role="search">
+            <input class="form-control" type="search" placeholder="Search Menu" aria-label="Search">
+            <button class="btn btn-search" type="submit">Search</button>
+        </form>
+    </div>
+
+    @foreach ($products as $product)
+        <div class="detail-order">
+            <div class="product-detail">
+                <div class="d-flex align-items-center">
+                    <img src="../image/barongko.jpg" alt="">
+                    <div class="ms-4">
+                        <h5 class="nama-produk"><b>{{ $product->name }}</b></h5>
+                        <p class="harga">Rp. {{ $product->price }}</p>
+                    </div>
+                </div>
+                <div class="trash-logo">
+                        <a href="/admin/menu/{{ $product->id }}/edit" style="text-decoration: none"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+                    <form action="/admin/menu/{{ $product->id }}" method="POST" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button class="border-0" style="background-color: #EED6C4;"><i class="fa fa-trash fa-2x"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endforeach
+@endsection

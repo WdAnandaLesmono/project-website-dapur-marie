@@ -165,8 +165,7 @@ li span {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    flex-grow: 1;
-    
+    flex-grow: 1;  
 }
 
 .field-name, .field-price, .field-category{
@@ -239,7 +238,7 @@ li span {
     margin: 0px 10px 0px;
 }
 
-.form-control-1{
+.form-control-1, .form-select{
     display: flex;
     flex-grow: 1;
     font-family: 'Poppins', sans-serif;
@@ -263,13 +262,12 @@ li span {
     border: 2px solid #6B4F4F;
 }
 
-.input-group-text{
+.input-group-text, .form-select{
     background-color: #EED6C4;
     padding: 15px;
     margin: 0px 45px 10px;
     border-radius: 4px;
     border: 2px solid #6B4F4F;
-
 }
 
 .add-img{
