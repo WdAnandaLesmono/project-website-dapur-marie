@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SignupController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,17 +48,15 @@ Route::get('admin/orders', function () {
     return view('admin/orders');
 });
 
-Route::get('admin/menu', function () {
-    return view('admin/menu');
-});
+Route::resource('admin/menu', ProductController::class);
 
 Route::get('admin/editmenu', function () {
     return view('admin/editmenu');
 });
 
-Route::get('admin/addmenu', function () {
-    return view('admin/addmenu');
-});
+// Route::get('admin/menu', function () {
+//     return view('admin/menu');
+// });
 
 Route::get('/editprofile', function () {
     return view('editprofile');

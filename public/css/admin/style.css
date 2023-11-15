@@ -12,18 +12,8 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar a {
-    color: black;
-}
-
 .navbar h5 {
     color: white;
-}
-
-.navbar a:hover,
-a:active {
-    text-decoration: underline;
-    color: black;
 }
 
 .navbar img {
@@ -175,8 +165,7 @@ li span {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    flex-grow: 1;
-    
+    flex-grow: 1;  
 }
 
 .field-name, .field-price, .field-category{
@@ -249,7 +238,7 @@ li span {
     margin: 0px 10px 0px;
 }
 
-.form-control-1{
+.form-control-1, .form-select{
     display: flex;
     flex-grow: 1;
     font-family: 'Poppins', sans-serif;
@@ -273,13 +262,12 @@ li span {
     border: 2px solid #6B4F4F;
 }
 
-.input-group-text{
+.input-group-text, .form-select{
     background-color: #EED6C4;
     padding: 15px;
     margin: 0px 45px 10px;
     border-radius: 4px;
     border: 2px solid #6B4F4F;
-
 }
 
 .add-img{
@@ -298,4 +286,21 @@ li span {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.act-btn {
+    background-color: #483434;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-decoration: none;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
 }

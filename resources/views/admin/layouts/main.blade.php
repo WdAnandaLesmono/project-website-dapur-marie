@@ -41,6 +41,8 @@
     </script>
     <!-- Font Awesome Javascript -->
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
+
+    @include('sweetalert::alert')
 </body>
 
 </html>
