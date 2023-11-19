@@ -21,7 +21,6 @@ body {
 
 .navbar li a:hover,
 a:active {
-    text-decoration: underline;
     color: #FFF3E4;
 }
 

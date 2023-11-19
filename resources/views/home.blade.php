@@ -8,7 +8,7 @@
                 <div class="col-md-6">
                     <h1 class="display-4">Welcome To <br> Dapur Marie</h1>
                     <p>Get your delicious food here!</p>
-                    <a class="btn btn-lg" href="/detailmenu" role="button">Buy Now</a>
+                    <a class="btn btn-lg" href="menu/" role="button">Buy Now</a>
                 </div>
                 <div class="col-md-6 text-center">
                     <div class="img-border">
@@ -29,88 +29,18 @@
     <h2 class="menu text-center">Menu</h2>
     <div class="menu-gallery">
         <div class="container">
-            <div class="row d-flex justify-content-center align-items-center g-5">
+            <div class="row d-flex align-items-center g-5">
+                @foreach ($products as $product)
                 <div class="col-md-4 d-flex justify-content-center">
                     <div class="card border-black" style="width: 18rem;">
-                        <img src="image/barongko.jpg" class="card-img-top" alt="barongko">
+                        <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top" alt="{{ $product->name }}">
                         <div class="card-body">
-                            <h5 class="card-title fw-700">Barongko</h5>
-                            <p class="card-text">Rp. 50.000</p>
+                            <a href="/menu/detailmenu/{{ $product->id }}" style="text-decoration: none; color:black"><h5 class="card-title fw-700">{{ $product->name }}</h5></a>
+                            <p class="card-text">Rp. {{ $product->price }}</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/puding-caramel.jpg" class="card-img-top" alt="puding-caramel">
-                        <div class="card-body">
-                            <h5 class="card-title">Puding Caramel</h5>
-                            <p class="card-text">Rp. 30.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/kacang-telur.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Kacang Telur</h5>
-                            <p class="card-text">Rp. 15.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/barongko.jpg" class="card-img-top" alt="barongko">
-                        <div class="card-body">
-                            <h5 class="card-title">Barongko</h5>
-                            <p class="card-text">Rp. 50.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/puding-caramel.jpg" class="card-img-top" alt="puding-caramel">
-                        <div class="card-body">
-                            <h5 class="card-title">Puding Caramel</h5>
-                            <p class="card-text">Rp. 30.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/kacang-telur.jpg" class="card-img-top" alt="kacang-telur">
-                        <div class="card-body">
-                            <h5 class="card-title">Kacang Telur</h5>
-                            <p class="card-text">Rp. 15.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/barongko.jpg" class="card-img-top" alt="barongko">
-                        <div class="card-body">
-                            <h5 class="card-title">Barongko</h5>
-                            <p class="card-text">Rp. 50.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/puding-caramel.jpg" class="card-img-top" alt="puding-caramel">
-                        <div class="card-body">
-                            <h5 class="card-title">Puding Caramel</h5>
-                            <p class="card-text">Rp. 30.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="image/kacang-telur.jpg" class="card-img-top" alt="kacang-telur">
-                        <div class="card-body">
-                            <h5 class="card-title">Kacang Telur</h5>
-                            <p class="card-text">Rp. 15.000</p>
-                        </div>
-                    </div>
-                </div>
+                </div>              
+                @endforeach
             </div>
         </div>
     </div>

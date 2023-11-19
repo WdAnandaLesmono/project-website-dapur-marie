@@ -40,13 +40,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->file('image')->store('post-image');
         $validatedData = $request->validate([
             'name' => 'required',
+            'image' => 'image|file|max:1024',
             'price' => 'required',
             'category_id' => 'required',
             'description' => 'required',
         ]);
+
+        if($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('product-images');
+        }
 
         Product::create($validatedData);
         return redirect('/admin/menu')->with('success', 'New product has been added');
@@ -105,6 +109,6 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::destroy($id);
-        return redirect('/admin/menu')->with('success', 'Post has been deleted');
+        return redirect('/admin/menu')->with('success', 'Product has been deleted');
     }
 }

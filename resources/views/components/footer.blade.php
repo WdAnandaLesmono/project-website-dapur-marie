@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col">
-                    <img src="image/logo.png" alt="logo">
+                    <img src="/image/logo.png" alt="logo">
                 </div>
                 <div class="col">
                     <table>
