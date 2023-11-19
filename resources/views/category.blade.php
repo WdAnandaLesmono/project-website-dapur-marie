@@ -10,7 +10,7 @@
             </li>
             @foreach ($categories as $category)
             <li class="nav-item me-4">
-                <a class="badge" href="/categories/{{ $category->id }}">{{ $category->name }}</a>
+                <a class="badge" href="/menu/categories/{{ $category->id }}">{{ $category->name }}</a>
             </li>             
             @endforeach
         </ul>

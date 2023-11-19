@@ -28,7 +28,7 @@ Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/categories/{category}', [CategoryController::class, 'show']);
+Route::get('/menu/categories/{category}', [CategoryController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about');
