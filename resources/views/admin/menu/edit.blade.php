@@ -56,6 +56,13 @@
                     </span>
                 </div>
                 <div class="input-group">
+                    <input type="number" class="form-control-1" id="stock" name="stock" placeholder="Stock"
+                        value="{{ old('stock', $product->stock) }}">
+                    <span class="input-group-text">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                </div>
+                <div class="input-group">
                     <select class="form-select" name="category_id" id="category_id">
                         @foreach ($categories as $category)
                             @if (old('category_id', $product->category_id) == $category->id)

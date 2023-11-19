@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
@@ -27,7 +28,7 @@ Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/', [HomeController::class, 'index']);
-Route::post('/', [HomeController::class, 'show']);
+Route::get('/categories/{category}', [CategoryController::class, 'show']);
 
 Route::get('/about', function () {
     return view('about');

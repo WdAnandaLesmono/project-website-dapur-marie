@@ -30,9 +30,10 @@
             <div class="product-detail">
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                    <div class="ms-4">
-                        <h5 class="nama-produk"><b>{{ $product->name }}</b></h5>
+                    <div class="ms-4 mt-2">
+                        <a href="/menu/detailmenu/{{ $product->id }}" style="text-decoration: none; color:black"><h5 class="nama-produk"><b>{{ $product->name }}</b></h5></a>
                         <p class="harga">Rp. {{ $product->price }}</p>
+                        <p class="stock">Stock: {{ $product->stock }}</p>
                     </div>
                 </div>
                 <div class="trash-logo">

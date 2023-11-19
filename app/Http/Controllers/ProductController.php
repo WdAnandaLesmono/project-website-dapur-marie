@@ -44,6 +44,7 @@ class ProductController extends Controller
             'name' => 'required',
             'image' => 'image|file|max:1024',
             'price' => 'required',
+            'stock' => 'required',
             'category_id' => 'required',
             'description' => 'required',
         ]);
@@ -92,6 +93,7 @@ class ProductController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'price' => 'required',
+            'stock' => 'required',
             'category_id' => 'required',
             'description' => 'required',
         ]);
