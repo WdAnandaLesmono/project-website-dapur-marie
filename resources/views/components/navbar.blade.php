@@ -23,7 +23,7 @@
 
             <ul class="navbar-nav d-flex align-items-center">
                 @auth
-                    <i class="fa fa-user-circle-o fa-2x ps-3 pe-1" style="color: #FFF3E4"></i>
+                    <a href="/profile"><i class="fa fa-user-circle-o fa-2x ps-3 pe-1" style="color: #FFF3E4"></i></a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
