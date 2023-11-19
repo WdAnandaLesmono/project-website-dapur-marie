@@ -27,7 +27,7 @@
 
     <h3 class="title-menu">Edit Menu</h3>
 
-    <form action="/admin/menu/{{ $product->id }}" method="POST">
+    <form action="/admin/menu/{{ $product->id }}" method="POST" class="mb-5">
         @method('put')
         @csrf
         <div class="content">

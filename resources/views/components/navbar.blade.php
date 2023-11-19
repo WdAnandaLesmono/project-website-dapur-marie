@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top">
-    <img src="image/dapur-marie-txt.jpeg" />
+    <img src="/image/dapur-marie-txt.jpeg" />
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active fw-700' : '' }}" href="/">Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'text-decoration-underline fw-700' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('menu') ? 'active fw-700' : '' }}" href="/menu">Menu</a>
+                    <a class="nav-link {{ Request::is('menu*') ? 'text-decoration-underline fw-700' : '' }}" href="/menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('about') ? 'active fw-700' : '' }}" href="/about">About</a>
+                    <a class="nav-link {{ Request::is('about') ? 'text-decoration-underline fw-700' : '' }}" href="/about">About</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">

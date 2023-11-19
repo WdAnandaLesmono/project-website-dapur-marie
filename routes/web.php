@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SignupController;
 use App\Models\Product;
@@ -24,25 +26,20 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::post('/', [HomeController::class, 'show']);
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/detailmenu', function () {
-    return view('detailmenu');
-})->middleware('auth');
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu/detailmenu/{product}', [MenuController::class, 'show'])->middleware('auth');
 
 Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/menu', function () {
-    return view('menu');
-});
 
 Route::get('admin/orders', function () {
     return view('admin/orders');

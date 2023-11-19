@@ -27,12 +27,13 @@
 
     <h3 class="title-menu">Add New Menu</h3>
 
-    <form action="/admin/menu" method="POST">
+    <form action="/admin/menu" method="POST" enctype="multipart/form-data" class="mb-5">
         @csrf
         <div class="content">
             <div>
                 <div class="add-img">
-                    <i class="fa fa-plus fa-7x"></i>
+                    <input type="file" id="imageInput" name="image" style="display: none;">
+                    <button id="addImageButton"><i class="fa fa-plus fa-7x"></i></button>
                 </div>
                 <div class="edit-logo">
                     <i class="fa fa-pencil-square-o"></i>
@@ -48,7 +49,14 @@
                     </span>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="form-control-1" id="price" name="price" placeholder="Price" value="{{ old('price') }}">
+                    <input type="file" class="form-control-1" id="image" name="image">
+                    <span class="input-group-text">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control-1" id="price" name="price" placeholder="Price"
+                        value="{{ old('price') }}">
                     <span class="input-group-text">
                         <i class="fa fa-pencil-square-o"></i>
                     </span>
@@ -62,8 +70,8 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="form-control-desc" id="description" name="description"
-                        placeholder="Description" value="{{ old('description') }}">
+                    <textarea type="text" class="form-control-desc" id="description" name="description" placeholder="Description"
+                        value="{{ old('description') }}"></textarea>
                     <span class="input-group-text">
                         <i class="fa fa-pencil-square-o"></i>
                     </span>
@@ -78,6 +86,7 @@
     </form>
 
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
+    {{-- <script src="script.js"></script> --}}
 
     @include('sweetalert::alert')
 </body>

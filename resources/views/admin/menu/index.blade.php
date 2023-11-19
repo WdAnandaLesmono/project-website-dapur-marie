@@ -26,10 +26,10 @@
     </div>
 
     @foreach ($products as $product)
-        <div class="detail-order">
+        <div class="detail-order mb-4">
             <div class="product-detail">
                 <div class="d-flex align-items-center">
-                    <img src="../image/barongko.jpg" alt="">
+                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
                     <div class="ms-4">
                         <h5 class="nama-produk"><b>{{ $product->name }}</b></h5>
                         <p class="harga">Rp. {{ $product->price }}</p>

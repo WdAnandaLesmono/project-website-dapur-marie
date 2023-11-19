@@ -19,6 +19,11 @@ body {
     color: #FFF3E4;
 }
 
+.navbar li a:hover,
+a:active {
+    color: #FFF3E4;
+}
+
 .navbar img {
     width: 68px;
     margin-right: 20px;
