@@ -6,7 +6,7 @@
     <div class="container menu-type p-2 mt-2 mb-4">
         <ul class="type me-auto mb-2 mb-lg-0">
             <li class="nav-item me-4">
-                <a class="badge {{ Request::is('menu') ? 'active' : '' }}" href="/menu">All</a>
+                <a class="badge" href="/menu">All</a>
             </li>
             @foreach ($categories as $category)
             <li class="nav-item me-4">

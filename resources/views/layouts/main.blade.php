@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/{{ request()->segment(2) == 'detailmenu' ? 'detailmenustyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == '' ? 'homestyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'menu' ? 'menustyle.css' : '' }}" />
+    <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'categories' ? 'menustyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'profile' ? 'profilestyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'order' ? 'orderstyle.css' : '' }}" />
 </head>
@@ -45,7 +46,6 @@
     </script>
     <!-- Font Awesome Javascript -->
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

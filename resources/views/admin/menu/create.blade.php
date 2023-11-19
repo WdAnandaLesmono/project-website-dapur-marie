@@ -62,6 +62,13 @@
                     </span>
                 </div>
                 <div class="input-group">
+                    <input type="number" class="form-control-1" id="stock" name="stock" placeholder="Stock"
+                        value="{{ old('stock') }}">
+                    <span class="input-group-text">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                </div>
+                <div class="input-group">
                     <select class="form-select" name="category_id" id="category_id" aria-label="Default select example">
                         <option selected disabled>Category</option>
                         @foreach ($categories as $category)

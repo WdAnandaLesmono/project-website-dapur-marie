@@ -27,7 +27,7 @@
 
     <h3 class="title-menu">Edit Menu</h3>
 
-    <form action="/admin/menu/{{ $product->id }}" method="POST" class="mb-5">
+    <form action="/admin/menu/{{ $product->id }}" method="POST" enctype="multipart/form-data" class="mb-5">
         @method('put')
         @csrf
         <div class="content">
@@ -49,8 +49,21 @@
                     </span>
                 </div>
                 <div class="input-group">
+                    <input type="file" class="form-control-1" id="image" name="image">
+                    <span class="input-group-text">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                </div>
+                <div class="input-group">
                     <input type="text" class="form-control-1" id="price" name="price" placeholder="Price"
                         value="{{ old('price', $product->price) }}">
+                    <span class="input-group-text">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="form-control-1" id="stock" name="stock" placeholder="Stock"
+                        value="{{ old('stock', $product->stock) }}">
                     <span class="input-group-text">
                         <i class="fa fa-pencil-square-o"></i>
                     </span>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,7 @@ class MenuController extends Controller
         return view('menu', [
             // 'posts' => Post::latest()->get(),
             'products' => Product::all(),
+            'categories' => Category::all()
         ]);
     }
 

@@ -16,7 +16,7 @@
                         <span class="badge me-3" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"></i></span>
                         <span class="badge me-4" id="orders">Orders</span>
                         <span class="badge me-1" id="add">-</span>
-                        <span class="badge me-1" id="sum">1</span>
+                        <span class="badge me-1" id="sum">0</span>
                         <span class="badge" id="substraction">+</span>
                     </div>
                 </div>
