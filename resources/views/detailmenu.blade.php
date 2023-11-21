@@ -13,11 +13,11 @@
                     <h2 class="title">{{ $product->name }}</h2>
                     <h4>Rp. {{ $product->price }}</h4>
                     <div class="row order mt-5">
-                        <span class="badge me-3" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"></i></span>
-                        <span class="badge me-4" id="orders">Orders</span>
-                        <span class="badge me-1" id="add">-</span>
-                        <span class="badge me-1" id="sum">0</span>
-                        <span class="badge" id="substraction">+</span>
+                        <button class="badge badge-order me-3" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"></i></button>
+                        <button class="badge badge-order me-4" id="orders">Orders</button>
+                        <button class="badge badge-order me-1" id="decreaseBtn">-</button>
+                        <span class="badge badge-order me-1" id="counterValue">0</span>
+                        <button class="badge badge-order" id="increaseBtn">+</button>
                     </div>
                 </div>
             </div>

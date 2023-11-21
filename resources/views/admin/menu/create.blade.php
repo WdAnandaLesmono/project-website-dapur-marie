@@ -87,7 +87,7 @@
         </div>
 
         <div class="btn-group">
-            <button id="btn-cancel">Cancel</button>
+            <a href="/admin/menu" style="text-decoration: none; display: flex; align-items: center; justify-content: center" id="btn-cancel">Cancel</a>
             <button id="btn-save">Save</button>
         </div>
     </form>

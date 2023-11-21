@@ -16,7 +16,8 @@ class ProductController extends Controller
     public function index()
     {
         return view('admin.menu.index', [
-            'products' => Product::all()
+            'products' => Product::all(),
+            'categories' => Category::all(),
         ]);
     }
 
@@ -49,7 +50,7 @@ class ProductController extends Controller
             'description' => 'required',
         ]);
 
-        if($request->file('image')) {
+        if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('product-images');
         }
 
@@ -102,7 +103,7 @@ class ProductController extends Controller
         if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('product-images');
         }
-        
+
         Product::where('id', $id)->update($validatedData);
         return redirect('/admin/menu')->with('success', 'Product has been updated');
     }

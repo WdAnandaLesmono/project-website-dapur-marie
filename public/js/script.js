@@ -1,33 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var addImageButton = document.getElementById("addImageButton");
-    var imageInput = document.getElementById("imageInput");
-    var imageContainer = document.getElementById("imageContainer");
+// Ambil elemen-elemen HTML yang dibutuhkan
+const decreaseBtn = document.getElementById("decreaseBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const counterValue = document.getElementById("counterValue");
 
-    addImageButton.addEventListener("click", function () {
-        // Membuka dialog pemilihan file saat tombol diklik
-        imageInput.click();
-    });
+// Inisialisasi value
+let value = 0;
 
-    imageInput.addEventListener("change", function () {
-        // Menangani perubahan pada input file
-        var file = imageInput.files[0];
+// Tambahkan event listener untuk tombol decrease
+decreaseBtn.addEventListener("click", () => {
+    if (value > 0) {
+        value--;
+        counterValue.innerText = value;
+    }
+});
 
-        if (file) {
-            // Membaca file gambar sebagai URL data
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                // Membuat elemen gambar
-                var imageElement = document.createElement("img");
-                imageElement.src = e.target.result;
-                imageElement.alt = "Selected Image";
-                imageElement.style.maxWidth = "100%";
-
-                // Menambahkan elemen gambar ke dalam div
-                imageContainer.appendChild(imageElement);
-            };
-
-            reader.readAsDataURL(file);
-        }
-    });
+// Tambahkan event listener untuk tombol increase
+increaseBtn.addEventListener("click", () => {
+    // Tambahkan kondisi untuk maksimum pesanan adalah 10
+    if (value < 10000) {
+        value++;
+        counterValue.innerText = value;
+    }
 });

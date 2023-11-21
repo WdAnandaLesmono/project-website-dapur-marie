@@ -10,12 +10,12 @@
                 <li class="nav-item me-4">
                     <a class="badge category-menu" href="#">All</a>
                 </li>
-                @foreach ($categories as $category)
-                    <li class="nav-item me-4">
-                        <a class="badge category-menu{{ Request::is('admin/menu/categories/' . $category->id) ? 'active' : '' }}"
-                            href="menu/categories/{{ $category->id }}">{{ $category->name }}</a>
-                    </li>
-                @endforeach
+                <li class="nav-item me-4">
+                    <a class="badge category-menu" href="#">Cake</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="badge category-menu" href="#">Snack</a>
+                </li>
             </ul>
         </div>
 
