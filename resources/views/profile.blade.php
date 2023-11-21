@@ -42,7 +42,7 @@
             <div class="img-profile">
                 <img src="image/icon-profile.png" alt="">
                 <div class="username-section">
-                    <h2><b>Username</b></h2>
+                    <h2><b>{{ auth()->user()->username }}</b></h2>
                     <a href="/editprofile" style="text-decoration: none">
                     <button>
                         Edit Profile

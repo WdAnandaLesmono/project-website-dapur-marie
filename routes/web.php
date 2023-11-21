@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EditProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
@@ -42,23 +43,14 @@ Route::get('/profile', function () {
 });
 
 
-Route::get('admin/orders', function () {
+Route::get('/admin/orders', function () {
     return view('admin/orders');
 });
 
-Route::resource('admin/menu', ProductController::class);
+Route::resource('/admin/menu', ProductController::class);
 
-Route::get('admin/editmenu', function () {
-    return view('admin/editmenu');
-});
-
-// Route::get('admin/menu', function () {
-//     return view('admin/menu');
-// });
-
-Route::get('/editprofile', function () {
-    return view('editprofile');
-});
+Route::get('/editprofile', [EditProfileController::class, 'index']);
+Route::post('/editprofile', [EditProfileController::class, 'updateProfile']);
 
 Route::get('/carts', function () {
     return view('carts');

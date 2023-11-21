@@ -9,9 +9,10 @@
                 <a class="badge {{ Request::is('menu') ? 'active' : '' }}" href="/menu">All</a>
             </li>
             @foreach ($categories as $category)
-            <li class="nav-item me-4">
-                <a class="badge {{ Request::is('menu/categories/' . $category->id) ? 'active' : '' }}" href="/menu/categories/{{ $category->id }}">{{ $category->name }}</a>
-            </li>             
+                <li class="nav-item me-4">
+                    <a class="badge {{ Request::is('menu/categories/' . $category->id) ? 'active' : '' }}"
+                        href="/menu/categories/{{ $category->id }}">{{ $category->name }}</a>
+                </li>
             @endforeach
         </ul>
         <i class="fa fa-shopping-cart fa-2x"></i>

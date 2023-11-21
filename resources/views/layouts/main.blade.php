@@ -46,6 +46,7 @@
     </script>
     <!-- Font Awesome Javascript -->
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

@@ -28,3 +28,11 @@
     text-align: center;
     padding: 10px;
 }
+
+.modal-content {
+    background-color: #FFF3E4;
+}
+
+.form-control {
+    border: solid black 2px;
+}

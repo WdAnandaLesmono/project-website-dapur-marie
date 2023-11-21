@@ -76,7 +76,7 @@ span {
     flex-wrap: wrap;
 }
 
-.badge {
+.nav-item .badge {
     width: 80px;
     text-decoration: none;
     font-size: 18px;
