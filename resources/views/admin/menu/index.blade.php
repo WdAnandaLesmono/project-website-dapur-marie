@@ -19,8 +19,8 @@
             </ul>
         </div>
 
-        <form class="search d-flex" role="search">
-            <input class="form-control" type="search" placeholder="Search Menu" aria-label="Search">
+        <form class="search d-flex align-items-center" role="search">
+            <input class="form-control" type="search" placeholder="Search Menu" name="search" aria-label="Search" value="{{ request('search') }}">
             <button class="btn btn-search" type="submit">Search</button>
         </form>
     </div>

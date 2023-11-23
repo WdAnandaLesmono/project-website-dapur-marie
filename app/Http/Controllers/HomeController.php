@@ -11,6 +11,7 @@ class HomeController extends Controller
     {
         return view('home', [
             // 'posts' => Post::latest()->get(),
+            'title' => 'Home',
             'products' => Product::all(),
         ]);
     }

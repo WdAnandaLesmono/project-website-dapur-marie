@@ -20,8 +20,8 @@
                         href="/about">About</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
+            <form action="/menu" method="GET" class="d-flex" role="search">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search..." aria-label="Search" value="{{ request('search') }}"/>
             </form>
 
             <ul class="navbar-nav d-flex align-items-center">
