@@ -32,19 +32,25 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu/categories/{category}', [CategoryController::class, 'index']);
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        'title' => 'About'
+    ]);
 });
 
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu/detailmenu/{product}', [MenuController::class, 'show'])->middleware('auth');
 
 Route::get('/profile', function () {
-    return view('profile');
+    return view('profile', [
+        'title' => 'Profile'
+    ]);
 });
 
 
 Route::get('/admin/orders', function () {
-    return view('admin/orders');
+    return view('admin/orders', [
+        'title' => 'Orders'
+    ]);
 });
 
 Route::resource('/admin/menu', ProductController::class);

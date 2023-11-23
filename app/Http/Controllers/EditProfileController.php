@@ -9,7 +9,9 @@ class EditProfileController extends Controller
 {
     public function index()
     {
-        return view('editprofile');
+        return view('editprofile', [
+            'title' => 'Edit Profile'
+        ]);
     }
 
     public function updateProfile(Request $request)

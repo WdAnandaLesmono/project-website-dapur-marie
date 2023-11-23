@@ -48,7 +48,7 @@
                     @endforeach
                 </div>
             @else
-            <h5>No product found</h5>
+                <h5>No product found</h5>
             @endif
         </div>
     </div>

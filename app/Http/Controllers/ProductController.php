@@ -16,7 +16,8 @@ class ProductController extends Controller
     public function index()
     {
         return view('admin.menu.index', [
-            'products' => Product::all(),
+            'title' => 'Menu Admin',
+            'products' => Product::latest()->filter()->get(),
             'categories' => Category::all(),
         ]);
     }

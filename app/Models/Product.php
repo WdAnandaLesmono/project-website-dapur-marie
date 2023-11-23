@@ -9,6 +9,12 @@ class Product extends Model
 {
     use HasFactory;
 
+    public function scopeFilter($query) {
+        if (request('search')) {
+            return $query->where('name', 'like', '%' . request('search') . '%');
+        }
+    }
+
     protected $fillable = [
         'name',
         'image',

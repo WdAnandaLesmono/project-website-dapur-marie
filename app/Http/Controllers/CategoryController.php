@@ -11,6 +11,7 @@ class CategoryController extends Controller
     public function index(Category $category)
     {
         return view('category', [
+            'title' => 'Menu',
             'categories' => Category::all(),
             'products' => $category->products,
         ]);

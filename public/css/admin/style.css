@@ -37,6 +37,7 @@ body {
 .btn-search {
     color: #FFF3E4;
     background-color: #6B4F4F;
+    height: 45px;
 }
 
 input .form-control{
@@ -45,6 +46,7 @@ input .form-control{
 
 .form-control {
     border: 2px solid #6B4F4F;
+    height: 45px;
 }
 
 .btn-search:hover {

@@ -11,8 +11,8 @@ class MenuController extends Controller
     public function index()
     {
         return view('menu', [
-            // 'posts' => Post::latest()->get(),
-            'products' => Product::all(),
+            'title' => 'Menu',
+            'products' => Product::oldest()->filter()->get(),
             'categories' => Category::all()
         ]);
     }
@@ -20,6 +20,7 @@ class MenuController extends Controller
     public function show(Product $product)
     {
         return view('detailmenu', [
+            'title' => 'Detail Menu',
             'product' => $product,
         ]);
     }

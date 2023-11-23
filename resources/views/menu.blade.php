@@ -18,22 +18,26 @@
         <i class="fa fa-shopping-cart fa-2x"></i>
     </div>
     <div class="container menu-gallery mt-2 mb-5">
-        <div class="row align-items-center g-5">
-            @foreach ($products as $product)
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card border-black" style="width: 18rem;">
-                        <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top"
-                            alt="{{ $product->name }}">
-                        <div class="card-body">
-                            <a href="/menu/detailmenu/{{ $product->id }}" style="text-decoration: none; color:black">
-                                <h5 class="card-title fw-700">{{ $product->name }}</h5>
-                            </a>
-                            <p class="card-text">Rp. {{ $product->price }}</p>
+        @if ($products->count())
+            <div class="row align-items-center g-5">
+                @foreach ($products as $product)
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card border-black" style="width: 18rem;">
+                            <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top"
+                                alt="{{ $product->name }}">
+                            <div class="card-body">
+                                <a href="/menu/detailmenu/{{ $product->id }}" style="text-decoration: none; color:black">
+                                    <h5 class="card-title fw-700">{{ $product->name }}</h5>
+                                </a>
+                                <p class="card-text">Rp. {{ $product->price }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+        @else
+            <h2 class="ms-3">No product found</h2>
+        @endif
     </div>
     <!-- Card End -->
 @endsection
