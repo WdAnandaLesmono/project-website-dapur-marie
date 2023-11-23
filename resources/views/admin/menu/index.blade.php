@@ -20,35 +20,39 @@
         </div>
 
         <form class="search d-flex align-items-center" role="search">
-            <input class="form-control" type="search" placeholder="Search Menu" name="search" aria-label="Search" value="{{ request('search') }}">
+            <input class="form-control" type="search" placeholder="Search Menu" name="search" aria-label="Search"
+                value="{{ request('search') }}">
             <button class="btn btn-search" type="submit">Search</button>
         </form>
     </div>
-
-    @foreach ($products as $product)
-        <div class="detail-order mb-4">
-            <div class="product-detail">
-                <div class="d-flex align-items-center">
-                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                    <div class="ms-4 mt-2">
-                        <a href="/menu/detailmenu/{{ $product->id }}" style="text-decoration: none; color:black">
-                            <h5 class="nama-produk"><b>{{ $product->name }}</b></h5>
-                        </a>
-                        <p class="harga">Rp. {{ $product->price }}</p>
-                        <p class="stock">Stock: {{ $product->stock }}</p>
+    @if ($products->count())
+        @foreach ($products as $product)
+            <div class="detail-order mb-4">
+                <div class="product-detail">
+                    <div class="d-flex align-items-center">
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
+                        <div class="ms-4 mt-2">
+                            <a href="/menu/detailmenu/{{ $product->id }}" style="text-decoration: none; color:black">
+                                <h5 class="nama-produk"><b>{{ $product->name }}</b></h5>
+                            </a>
+                            <p class="harga">Rp. {{ $product->price }}</p>
+                            <p class="stock">Stock: {{ $product->stock }}</p>
+                        </div>
+                    </div>
+                    <div class="trash-logo">
+                        <a href="/admin/menu/{{ $product->id }}/edit" style="text-decoration: none"><i
+                                class="fa fa-pencil-square-o fa-2x"></i></a>
+                        <form action="/admin/menu/{{ $product->id }}" method="POST" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button class="border-0" style="background-color: #EED6C4;"><i
+                                    class="fa fa-trash fa-2x"></i></button>
+                        </form>
                     </div>
                 </div>
-                <div class="trash-logo">
-                    <a href="/admin/menu/{{ $product->id }}/edit" style="text-decoration: none"><i
-                            class="fa fa-pencil-square-o fa-2x"></i></a>
-                    <form action="/admin/menu/{{ $product->id }}" method="POST" class="d-inline">
-                        @method('delete')
-                        @csrf
-                        <button class="border-0" style="background-color: #EED6C4;"><i
-                                class="fa fa-trash fa-2x"></i></button>
-                    </form>
-                </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    @else
+        <h3 class="container" style="color: #EED6C4; margin-left: 80px">No product found</h3>
+    @endif
 @endsection
