@@ -53,7 +53,7 @@ Route::get('/admin/orders', function () {
     ]);
 });
 
-Route::resource('/admin/menu', ProductController::class);
+Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'admin']);
 
 Route::get('/editprofile', [EditProfileController::class, 'index']);
 Route::post('/editprofile', [EditProfileController::class, 'updateProfile']);
