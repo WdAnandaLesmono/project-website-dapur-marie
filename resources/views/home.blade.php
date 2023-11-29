@@ -2,6 +2,9 @@
 
 @section('body')
     <!-- Jumbotron Start-->
+    <a href="/cart" class="act-btn">
+        <i class="fa fa-shopping-cart"></i>
+    </a>
     <div class="jumbotron">
         <div class="container">
             <div class="row">

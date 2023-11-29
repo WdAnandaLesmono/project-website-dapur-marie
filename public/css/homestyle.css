@@ -138,3 +138,21 @@ a:active {
 .footer h1 {
     color: #FFF3E4;
 }
+
+.act-btn {
+    background-color: #EED6C4;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #483434;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-decoration: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border: 2px solid black;
+}
