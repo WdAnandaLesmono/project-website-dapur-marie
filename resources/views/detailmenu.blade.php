@@ -13,11 +13,16 @@
                     <h2 class="title">{{ $product->name }}</h2>
                     <h4>Rp. {{ $product->price }}</h4>
                     <div class="row order mt-5">
-                        <button class="badge badge-order me-3" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"></i></button>
-                        <button class="badge badge-order me-4" id="orders">Orders</button>
-                        <button class="badge badge-order me-1" id="decreaseBtn">-</button>
+                        <form id="addToCart" class="d-flex" method="POST" action="{{ url('add_cart', $product->id) }}">
+                            @csrf
+                            <button class="badge badge-order me-3" value="Add To Cart" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"></i></button>
+                            <button class="badge badge-order me-4" id="orders">Orders</button>
+                            <input type="number" name="quantity" class="badge-order text-center" value="1" min="1" style="width: 60px">
+
+                        </form>
+                        {{-- <button class="badge badge-order me-1" id="decreaseBtn">-</button>
                         <span class="badge badge-order me-1" id="counterValue">0</span>
-                        <button class="badge badge-order" id="increaseBtn">+</button>
+                        <button class="badge badge-order" id="increaseBtn">+</button> --}}
                     </div>
                 </div>
             </div>

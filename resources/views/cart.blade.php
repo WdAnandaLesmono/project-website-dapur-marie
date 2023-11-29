@@ -25,7 +25,7 @@
     <!-- Navbar Start-->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
-            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+            <a href="/menu  " style="color: black"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -51,59 +51,44 @@
                     GANGNAM, KAB. BUSAN, SOUTH KOREA, ID 12345</span>
             </div>
         </div>
-        <i class="fa fa-arrow-right fa-2x d-flex justify-content-end"></i>
+        <a href="/selectaddress" style="color: black; text-decoration: none"><i
+                class="fa fa-arrow-right fa-2x d-flex justify-content-end"></i></a>
         <div class="dashed mt-3"></div>
     </div>
 
     {{-- Card Start --}}
     <div class="container container-card col-8 my-5">
-        <div class="card-body mb-3">
-            <div class="col">
-                <div class="quantity mt-3 d-flex align-items-center">
-                    <span id="quantity">Quantity</span>
-                    <a class="badge ms-2" href="#">1x</a>
-                </div>
-                <i class="fa fa-trash fa-2x mt-3"></i>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <img class="card-img" src="image/barongko.jpg" alt="barongko">
-                </div>
-                <div class="col ms-4 my-3 ms-5">
-                    <div class="row d-flex">
-                        <h5 class="fw-bold">Barongko</h5>
-                        <P>Lorem ipsum</P>
-                        <br> <br>
-                        <P>Lorem ipsum dolor sit amet consectetur</P>
-                        <h5 class="fw-bold pe-3" style="text-align: end">Rp. 50.000,00</h5>
+        @if ($cart->Count() > 0)
+            @foreach ($cart as $cart)
+                <div class="card-body mb-3">
+                    <div class="col">
+                        <div class="quantity mt-3 d-flex align-items-center">
+                            <span id="quantity">Quantity</span>
+                            <a class="badge ms-2" href="#">{{ $cart->quantity }}x</a>
+                        </div>
+                        <i class="fa fa-trash fa-2x mt-3"></i>
+                    </div>
+                    <div class="row">   
+                        <div class="col-2">
+                            <img class="card-img" src="{{ asset('storage/' . $cart->product->image) }}" alt="{{ $cart->product->name }}">
+                        </div>
+                        <div class="col ms-4 my-3 ms-5 d-flex align-items-center">
+                            <div class="row d-flex align-items-center">
+                                <h5 class="fw-bold">{{ $cart->product->name }}</h5>
+                                {{-- <P>Lorem ipsum</P> --}}
+                                <br> <br>
+                                <p>{{ Str::limit($cart->product->description, 36) }}</P>
+                                <h5 class="fw-bold pe-3" style="text-align: end">Rp. {{ $cart->product->price * $cart->quantity }}</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            @endforeach
+        @else
+            <div class="container">
+                <h2 class="text-center">Your cart is empty</h2>
             </div>
-        </div>
-        <div class="card-body">
-            <div class="col">
-                <div class="quantity mt-3 d-flex align-items-center">
-                    <span id="quantity">Quantity</span>
-                    <a class="badge ms-2" href="#">1x</a>
-                </div>
-                <i class="fa fa-trash fa-2x mt-3"></i>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <img class="card-img" src="image/barongko.jpg" alt="barongko">
-                </div>
-                <div class="col ms-4 my-3 ms-5">
-                    <div class="row d-flex">
-                        <h5 class="fw-bold">Barongko</h5>
-                        <P>Lorem ipsum</P>
-                        <br> <br>
-                        <P>Lorem ipsum dolor sit amet consectetur</P>
-                        <h5 class="fw-bold pe-3" style="text-align: end">Rp. 50.000,00</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        @endif
     </div>
     {{-- Card End --}}
 

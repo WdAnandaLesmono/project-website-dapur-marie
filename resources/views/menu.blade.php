@@ -15,7 +15,7 @@
                 </li>
             @endforeach
         </ul>
-        <i class="fa fa-shopping-cart fa-2x"></i>
+        <a href="/cart" style="color: black"><i class="fa fa-shopping-cart fa-2x"></i></a>
     </div>
     <div class="container menu-gallery mt-2 mb-5">
         @if ($products->count())
