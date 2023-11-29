@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EditProfileController;
 use App\Http\Controllers\HomeController;
@@ -58,10 +59,9 @@ Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'a
 Route::get('/editprofile', [EditProfileController::class, 'index']);
 Route::post('/editprofile', [EditProfileController::class, 'updateProfile']);
 
-Route::get('/carts', function () {
-    return view('carts');
-});
+Route::post('/add_cart/{id}', [CartController::class, 'add_cart'])->middleware('auth');
+Route::get('/cart', [CartController::class, 'show_cart'])->middleware('auth');
 
 Route::get('/selectaddress', function () {
     return view('selectaddress');
-});
+})->middleware('auth');

@@ -53,9 +53,9 @@
         </div>
 
         <div class="btn-group">
-            <label class="btn">Charts</label>
-            <label class="btn">Orders</label>
-            <label class="btn">History</label>
+            <a class="btn" href="/cart">Carts</a>
+            <a class="btn">Orders</a>
+            <a class="btn">History</a>
         </div>
 
         <div class="detail-order">
