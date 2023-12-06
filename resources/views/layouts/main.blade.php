@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == '' ? 'homestyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'menu' ? 'menustyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'categories' ? 'menustyle.css' : '' }}" />
-    <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'profile' ? 'profilestyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'order' ? 'orderstyle.css' : '' }}" />
 </head>
 

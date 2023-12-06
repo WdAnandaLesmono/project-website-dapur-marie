@@ -22,7 +22,7 @@ class CartController extends Controller
         $cart->quantity = $request->quantity;
         $cart->save();
 
-        return redirect()->back()->with('success', 'Item has been added to cart');
+        return redirect()->back()->with('success', 'Product has been added to cart');
     }
 
     public function show_cart()
@@ -32,5 +32,14 @@ class CartController extends Controller
         $cart = cart::where('user_id', '=', $id)->with('product')->get();
 
         return view('cart', compact('cart'));
+    }
+
+    public function remove_cart($id)
+    {
+        $cart = cart::find($id);
+
+        $cart->delete();
+
+        return redirect()->back()->with('success', 'Product has been deleted');
     }
 }

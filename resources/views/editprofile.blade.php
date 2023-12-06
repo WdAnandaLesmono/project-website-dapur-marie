@@ -84,17 +84,18 @@
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <form action="">
+                        <form method="POST" action="">
+                            @csrf
                             <div class="modal-header border-0">
                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="password" value="{{ old('password') ?? '' }}">
                             </div>
                             <div class="modal-footer border-0">
-                                <button type="submit" class="btn-edit">Save changes</button>
+                                <button type="submit" name="editPassword" class="btn-edit">Save changes</button>
                             </div>
                         </form>
                     </div>

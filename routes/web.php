@@ -6,10 +6,13 @@ use App\Http\Controllers\EditProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SignupController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +33,7 @@ Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/menu/categories/{category}', [CategoryController::class, 'index']);
+
 
 Route::get('/about', function () {
     return view('about', [
@@ -39,13 +42,12 @@ Route::get('/about', function () {
 });
 
 Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu/categories/{category}', [CategoryController::class, 'index']);
 Route::get('/menu/detailmenu/{product}', [MenuController::class, 'show'])->middleware('auth');
 
-Route::get('/profile', function () {
-    return view('profile', [
-        'title' => 'Profile'
-    ]);
-});
+// Route::get('/profile', [ProfileController::class, 'index']);
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+Route::get('/profile/order', [ProfileController::class, 'show_order'])->middleware('auth');
 
 
 Route::get('/admin/orders', function () {
@@ -57,10 +59,14 @@ Route::get('/admin/orders', function () {
 Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'admin']);
 
 Route::get('/editprofile', [EditProfileController::class, 'index']);
-Route::post('/editprofile', [EditProfileController::class, 'updateProfile']);
+Route::post('/editprofile', [EditProfileController::class, 'updateUsername']);
+// Route::post('/editpassword', [EditProfileController::class, 'updatePassword']);
 
 Route::post('/add_cart/{id}', [CartController::class, 'add_cart'])->middleware('auth');
+Route::get('/remove_cart/{id}', [CartController::class, 'remove_cart'])->middleware('auth');
 Route::get('/cart', [CartController::class, 'show_cart'])->middleware('auth');
+
+Route::get('/cash_order', [OrderController::class, 'cash_order'])->middleware('auth');
 
 Route::get('/selectaddress', function () {
     return view('selectaddress');

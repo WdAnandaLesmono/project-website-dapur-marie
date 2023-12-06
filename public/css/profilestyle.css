@@ -80,7 +80,7 @@ button {
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover, .btn.active{
     background-color: #6B4F4F;
     color: white;
 }
