@@ -50,11 +50,7 @@ Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 Route::get('/profile/order', [ProfileController::class, 'show_order'])->middleware('auth');
 
 
-Route::get('/admin/orders', function () {
-    return view('admin/orders', [
-        'title' => 'Orders'
-    ]);
-});
+Route::get('/admin/orders', [OrderController::class, 'show_order']);
 
 Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'admin']);
 

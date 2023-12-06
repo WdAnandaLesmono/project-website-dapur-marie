@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Cart;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -33,5 +34,13 @@ class OrderController extends Controller
         }
 
         return redirect()->back()->with('success', 'Product is in process');
+    }
+
+    public function show_order()
+    {
+        return view('admin/orders', [
+            'title' => 'Orders',
+            'orders' => Order::all(),
+        ]);
     }
 }
