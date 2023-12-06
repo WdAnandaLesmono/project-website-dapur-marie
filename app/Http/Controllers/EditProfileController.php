@@ -14,19 +14,24 @@ class EditProfileController extends Controller
         ]);
     }
 
-    public function updateProfile(Request $request)
+    public function updateUsername(Request $request)
     {
         $validatedData = $request->validate([
             'username' => 'required',
         ]);
 
         User::where('id', auth()->user()->id)->update($validatedData);
-        return redirect('/editprofile')->with('success', 'Username has been updated');
+        return redirect()->back()->with('success', 'Username has been updated');
     }
-    // public function editProfile() {
-    //     return view('admin.menu.edit', [
-    //         'product' => Product::find($id),
-    //         'categories' => Category::all()
-    //     ]);
-    // }
+
+    public function updatePassword(Request $request)
+    {
+        $validatedData = $request->validate([
+            'password' => 'required',
+        ]);
+
+        User::where('id', auth()->user()->id)->update($validatedData);
+        return redirect()->back()->with('success', 'Password has been updated');
+    }
+    
 }

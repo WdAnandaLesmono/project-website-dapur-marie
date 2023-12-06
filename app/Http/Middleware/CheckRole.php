@@ -22,4 +22,11 @@ class CheckRole
 
         return redirect('/')->with('error', 'Anda bukan admin');
     }
+
+    protected function redirectTo($request)
+    {
+        if (!$request->expectsJson()) {
+            return route('login');
+        }
+    }
 }
