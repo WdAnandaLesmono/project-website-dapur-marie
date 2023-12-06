@@ -37,7 +37,7 @@
                 </div>
                 <div class="row">
                     <div class="col-2 me-5">
-                        <img class="card-img" src="/image/barongko.jpg" alt="{{ $order->product->name }}">
+                        <img class="card-img" src="{{ asset('storage/' . $order->product->image) }}" alt="{{ $order->product->name }}">
                     </div>
                     <div class="col">
                         <h5 class="fw-bold">{{ $order->product->name }}</h5>
