@@ -92,7 +92,8 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <input type="password" class="form-control" id="password" name="password" value="{{ old('password') ?? '' }}">
+                                <input type="password" class="form-control" id="password" name="password"
+                                    value="{{ old('password') ?? '' }}">
                             </div>
                             <div class="modal-footer border-0">
                                 <button type="submit" name="editPassword" class="btn-edit">Save changes</button>

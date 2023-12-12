@@ -39,47 +39,20 @@
     </nav>
     <!-- Navbar End -->
 
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-            <p class="user-data">Febi Fiantika | (+62) 612-3456-7898</p>
-            <p class="user-address">
-                Jln. Lorem Ipsum, No. 89, Gangnam, Kab. Busan, Seoul, South Korea
-                <br>ID 12345
-            </p>
-        </label>
-        <i class="fa fa-pencil-square-o fa-2x d-flex justify-content-end" aria-hidden="true"></i>
+    <div class="container col-5 mt-5">
+        <form method="POST" action="">
+            @csrf
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address">{{ auth()->user()->address }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="telephone_number" class="form-label">Telephone Number</label>
+                <input type="text" class="form-control" id="telephone_number" name="telephone_number" value="{{ auth()->user()->telephone_number }}">
+            </div>
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </form>
     </div>
-
-    <div class="borders"></div>
-
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-            <p class="user-data">Febi Fiantika | (+62) 612-3456-7898</p>
-            <p class="user-address">
-                Jln. Lorem Ipsum, No. 89, Gangnam, Kab. Busan, Seoul, South Korea
-                <br>ID 12345
-            </p>
-        </label>
-        <i class="fa fa-pencil-square-o fa-2x d-flex justify-content-end" aria-hidden="true"></i>
-    </div>
-
-    <div class="borders"></div>
-
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-            <p class="user-data">Febi Fiantika | (+62) 612-3456-7898</p>
-            <p class="user-address">
-                Jln. Lorem Ipsum, No. 89, Gangnam, Kab. Busan, Seoul, South Korea
-                <br>ID 12345
-            </p>
-        </label>
-        <i class="fa fa-pencil-square-o fa-2x d-flex justify-content-end" aria-hidden="true"></i>
-    </div>
-
-    <div class="borders"></div>
 
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
 

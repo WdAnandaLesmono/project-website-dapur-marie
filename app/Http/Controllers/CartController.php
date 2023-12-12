@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\User;
 use App\Models\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,5 +42,16 @@ class CartController extends Controller
         $cart->delete();
 
         return redirect()->back()->with('success', 'Product has been deleted');
+    }
+
+    public function update_address(Request $request)
+    {
+        $validatedData = $request->validate([
+            'address' => 'required',
+            'telephone_number' => 'required',
+        ]);
+
+        User::where('id', auth()->user()->id)->update($validatedData);
+        return redirect('cart')->with('success', 'Address has been updated');
     }
 }

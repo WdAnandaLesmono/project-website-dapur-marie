@@ -33,5 +33,4 @@ class EditProfileController extends Controller
         User::where('id', auth()->user()->id)->update($validatedData);
         return redirect()->back()->with('success', 'Password has been updated');
     }
-    
 }

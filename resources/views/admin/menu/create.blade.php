@@ -77,8 +77,7 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <textarea type="text" class="form-control-desc" id="description" name="description" placeholder="Description"
-                        value="{{ old('description') }}"></textarea>
+                    <textarea type="text" class="form-control-desc" id="description" name="description" placeholder="Description">{{ old('description') }}</textarea>
                     <span class="input-group-text">
                         <i class="fa fa-pencil-square-o"></i>
                     </span>
