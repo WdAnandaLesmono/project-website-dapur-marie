@@ -15,10 +15,9 @@ class OrderController extends Controller
         $user = Auth::user();
         $userid = $user->id;
 
-        $data=cart::where('user_id', '=', $userid)->get();
+        $data = cart::where('user_id', '=', $userid)->get();
 
-        foreach($data as $data) 
-        {
+        foreach ($data as $data) {
             $order = new order;
             $order->quantity = $data->quantity;
             $order->product_id = $data->product_id;
@@ -42,5 +41,37 @@ class OrderController extends Controller
             'title' => 'Orders',
             'orders' => Order::all(),
         ]);
+    }
+
+    public function wallet_order(Request $request)
+    {
+        $user = Auth::user();
+        $userid = $user->id;
+
+        $data = cart::where('user_id', '=', $userid)->get();
+
+        foreach ($data as $data) {
+            $order = new order;
+            $order->quantity = $data->quantity;
+            $order->product_id = $data->product_id;
+            $order->user_id = $data->user_id;
+            $order->payment_status = 'E-Wallet';
+            $order->delivery_status = 'Processing';
+
+            $order->save();
+
+            $validatedData = $request->validate(['image' => 'image|file|max:1024',]);
+            if ($request->file('image')) {
+                $imagePath = $request->file('image')->store('product-images');
+                $order->image = $imagePath;
+                $order->save();
+            }
+
+            $cart_id = $data->id;
+            $cart = cart::find($cart_id);
+            $cart->delete();
+        }
+
+        return redirect()->back()->with('success', 'Product is in process');
     }
 }

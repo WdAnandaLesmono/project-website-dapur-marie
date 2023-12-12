@@ -15,9 +15,11 @@
                     <div class="row order mt-5">
                         <form id="addToCart" class="d-flex" method="POST" action="{{ url('add_cart', $product->id) }}">
                             @csrf
-                            <button class="badge badge-order me-3" value="Add To Cart" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"></i></button>
+                            <button class="badge badge-order me-3" value="Add To Cart" id="shopping-cart"><i
+                                    class="fa fa-shopping-cart fa-2x"></i></button>
                             <button class="badge badge-order me-4" id="orders">Orders</button>
-                            <input type="number" name="quantity" class="badge-order text-center" value="1" min="1" style="width: 60px">
+                            <input type="number" name="quantity" class="badge-order text-center" value="1"
+                                min="1" style="width: 60px">
 
                         </form>
                         {{-- <button class="badge badge-order me-1" id="decreaseBtn">-</button>

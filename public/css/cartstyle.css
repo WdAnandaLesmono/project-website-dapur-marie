@@ -97,7 +97,14 @@ li span {
     bottom: 0px;
     position: fixed;
     z-index: 1000;
-    color: white;  
+    color: white;
+    opacity: 0.0;  
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-end:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .btn-checkout, .btn-checkout:hover {
@@ -119,16 +126,21 @@ li span {
     color: #FFF3E4;
 }
 
+.btn-wallet {
+    border: none;
+    background: none;
+}
+
 .modal-body, .modal-footer {
     background-color: #FFF3E4;
 }
 
 .btn-cancel, .btn-cancel:hover {
     color: #483434;
-    border: 1px solid #483434;
+    border: 2px solid #483434;
 }
 
-.btn-pay, .btn-pay:hover {
+.btn-ok, .btn-ok:hover {
     background-color: #6B4F4F;
     color: #FFF3E4;
 }

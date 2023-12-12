@@ -46,12 +46,11 @@
         </div>
         <div class="row mt-4">
             <div class="ms-5 col-7 ps-5">
-                <span class="d-block">Febi Fiantika | (+62) 612-3456-7898</span>
-                <span class="d-block">Lorem ispan sum dolor, sit amet consectetur adipisicing elit. Harum, tempora.
-                    GANGNAM, KAB. BUSAN, SOUTH KOREA, ID 12345</span>
+                <span class="d-block">{{ auth()->user()->username }} | {{ auth()->user()->telephone_number }}</span>
+                <span class="d-block">{{ auth()->user()->address }}</span>
             </div>
         </div>
-        <a href="/selectaddress" style="color: black; text-decoration: none"><i
+        <a href="/update_address" style="color: black; text-decoration: none"><i
                 class="fa fa-arrow-right fa-2x d-flex justify-content-end"></i></a>
         <div class="dashed mt-3"></div>
     </div>
@@ -87,7 +86,7 @@
                     </div>
                 </div>
 
-                <?php $totalprice = $totalprice + $cart->product->price * $cart->quantity ?>
+                <?php $totalprice = $totalprice + $cart->product->price * $cart->quantity; ?>
             @endforeach
         @else
             <div class="container">
@@ -115,27 +114,56 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn-back" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></button>
+                    <button type="button" class="btn-back" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></button>
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Payment Option</h1>
                 </div>
                 <div class="modal-body">
+                    Pilih jenis pembayaran
+                </div>
+                <div class="modal-footer">
                     <div class="row d-flex align-items-center">
                         <div class="col-1">
                             <a href="{{ url('cash_order') }}"><i class="fa fa-money-bill-alt fa-2x"></i></a>
                         </div>
-                        <div class="col ms-2">
-                            <a href="{{ url('cash_order') }}" style="text-decoration: none"><span>Cash On Delivery</span></a>
+                        <div class="col ms-4">
+                            <a href="{{ url('cash_order') }}" style="text-decoration: none"><span>Cash On
+                                    Delivery</span></a>
                         </div>
                     </div>
                     <div class="row d-flex align-items-center">
                         <div class="col-1">
-                            <a href=""><i class="fa fa-wallet fa-2x"></i></a>
+                            <button class="btn-wallet" data-bs-target="#exampleModal2" data-bs-toggle="modal"><i
+                                    class="fa fa-wallet fa-2x"></i></button>
                         </div>
-                        <div class="col ms-2">
-                            <a href="{{ url('cash_order') }}" style="text-decoration: none"><span>E-Wallet</span></a>
+                        <div class="col ms-3">
+                            <button class="btn-wallet" data-bs-target="#exampleModal2"
+                                data-bs-toggle="modal"><span>E-Wallet</span></button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-back" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></button>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Upload Bukti Pembayaran</h1>
+                </div>
+                <form method="POST" enctype="multipart/form-data" action="">
+                    <div class="modal-body">
+                        @csrf
+                        <input type="file" class="form-control-1" id="image" name="image">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" name="submit" class="btn btn-ok">OK</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
