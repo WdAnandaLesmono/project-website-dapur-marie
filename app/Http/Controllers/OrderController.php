@@ -23,7 +23,7 @@ class OrderController extends Controller
             $order->product_id = $data->product_id;
             $order->user_id = $data->user_id;
             $order->payment_status = 'Cash On Delivery';
-            $order->delivery_status = 'Processing';
+            $order->delivery_status = 'Being Delivered';
 
             $order->save();
 
@@ -32,7 +32,7 @@ class OrderController extends Controller
             $cart->delete();
         }
 
-        return redirect()->back()->with('success', 'Product is in process');
+        return redirect()->back()->with('success', 'Product is in the process of delivery');
     }
 
     public function show_order()
@@ -73,5 +73,12 @@ class OrderController extends Controller
         }
 
         return redirect()->back()->with('success', 'Product is in process');
+    }
+
+    public function verify_delivery(Request $request)
+    {
+        $orderId = $request->input('order_id');
+        Order::where('id', $orderId)->update(['delivery_status' => 'Being Delivered']);
+        return redirect()->back()->with('success', 'Payment successfully verified, product is in the process of delivery');
     }
 }

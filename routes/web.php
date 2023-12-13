@@ -51,6 +51,7 @@ Route::get('/editprofile', [EditProfileController::class, 'index']);
 Route::post('/editprofile', [EditProfileController::class, 'updateUsername']);
 
 Route::get('/admin/orders', [OrderController::class, 'show_order']);
+Route::post('/verify_delivery', [OrderController::class, 'verify_delivery'])->name('verify_delivery');
 Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'admin']);
 
 // Route::post('/editpassword', [EditProfileController::class, 'updatePassword']);
@@ -60,6 +61,7 @@ Route::get('/remove_cart/{id}', [CartController::class, 'remove_cart'])->middlew
 Route::get('/cart', [CartController::class, 'show_cart'])->middleware('auth');
 Route::post('/cart', [OrderController::class, 'wallet_order'])->middleware('auth');
 Route::get('/cash_order', [OrderController::class, 'cash_order'])->middleware('auth');
+
 
 Route::get('/update_address', function () {
     return view('selectaddress');

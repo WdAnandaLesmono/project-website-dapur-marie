@@ -16,17 +16,11 @@
             </div>
             <div class="col pe-5">
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Perferendis, praesentium quidem! Architecto dolores doloribus
-                    molestias officiis. Error, magnam eum repellat commodi similique
-                    excepturi amet illum quas rerum repudiandae consectetur blanditiis!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-                    repellat exercitationem provident deleniti quos ea doloremque! Sequi
-                    quod consectetur, possimus accusamus autem maiores ex iste nulla.
-                    Pariatur nesciunt ut impedit? Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Hic illum blanditiis eum perferendis, eos sapiente
-                    vitae voluptatum inventore ducimus architecto dolorem fugit harum,
-                    modi corrupti. Neque optio nam qui atque.
+                    Dapur marie merupakan sebuah usaha yang menyediakan kue dan snack yang memiliki rasa khas tradisional,
+                    menggunakan bahan-bahan pilihan yang memastikan produk dari dapur marie terjamin halal, nikmat, serta
+                    sehat. dapur marie memproduksi kue barongko dengan rasa khas tradisionalnya, pudding caramel yang
+                    menggugah selera dengan kelembutan dan tampilannya yang menarik, serta kacang telur yang memberikan rasa
+                    nostalgia pada momen khusus.
                 </p>
             </div>
         </div>

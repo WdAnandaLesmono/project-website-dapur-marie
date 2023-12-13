@@ -12,6 +12,7 @@
                 <div class="container">
                     <h2 class="title">{{ $product->name }}</h2>
                     <h4>Rp. {{ $product->price }}</h4>
+                    <p>Stock: {{ $product->stock }}</p>
                     <div class="row order mt-5">
                         <form id="addToCart" class="d-flex" method="POST" action="{{ url('add_cart', $product->id) }}">
                             @csrf
