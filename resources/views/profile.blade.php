@@ -69,7 +69,8 @@
                         <img src="{{ asset('storage/' . $product->product->image) }}" alt="{{ $product->product->name }}">
                         <div class="m-4">
                             <h5 class="nama-produk"><b>{{ $product->product->name }}</b></h5>
-                            <p class="harga">Rp. {{ $product->product->price * $product->quantity }}</p>
+                            <span class="harga">Rp. {{ $product->product->price * $product->quantity }}</span>
+                            <p class="status">{{ $product->delivery_status }}</p>
                         </div>
                         <p class="jumlah-order">{{ $product->quantity }}x</p>
                         <div class="trash-logo">

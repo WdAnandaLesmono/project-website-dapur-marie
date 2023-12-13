@@ -64,14 +64,15 @@
             <div class="img-border me-5">
                 <img src="image/barongko.jpg" alt="barongko">
             </div>
-            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque dicta iure doloribus mollitia asperiores
-                perspiciatis dolor, voluptas eius veritatis quia non blanditiis ad consequatur. Eligendi ratione magnam
-                harum iure nobis!</span>
+            <span>Dapur marie menyediakan barongko dengan memiliki rasa yang unik yang merupakan kue tradisional dari
+                Sulawesi Selatan. Terbuat dari pisang pilihan serta bahan-bahan alami yang memastikan barongko dapur marie
+                terjamin halal, nikmat, dan sehat.
+            </span>
         </div>
         <div class="container d-flex align-items-center">
-            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque dicta iure doloribus mollitia asperiores
-                perspiciatis dolor, voluptas eius veritatis quia non blanditiis ad consequatur. Eligendi ratione magnam
-                harum iure nobis!</span>
+            <span>Puding caramel dapur marie merupakan hidangan pencuci mulut yang rasanya terjamin lezat dari kombinasi
+                rasa lembut pudding serta tampilan pudding dapur marie yang menarik sehingga menggugah selera.
+            </span>
             <div class="img-border ms-5">
                 <img src="image/puding-caramel.jpg" alt="puding-caramel">
             </div>
@@ -80,9 +81,9 @@
             <div class="img-border me-5">
                 <img src="image/kacang-telur.jpg">
             </div>
-            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque dicta iure doloribus mollitia asperiores
-                perspiciatis dolor, voluptas eius veritatis quia non blanditiis ad consequatur. Eligendi ratione magnam
-                harum iure nobis!</span>
+            <span>Kacang telur dari dapur marie memiliki rasa yang khas. Kombinasi rasa manis dan gurih menciptakan rasa
+                yang unik dan lezat. Kacang telur dapur marie memberikan rasa nostalgia yang mengingatkan momen
+                khusus.</span>
         </div>
     </div>
     <!-- Description End -->

@@ -83,6 +83,10 @@ li span {
     font-size: 20px;
 }
 
+.order li:nth-child(3) {
+    flex: 1;
+}
+
 .card-img {
     width: 170px;
     height: 156px;
@@ -315,4 +319,31 @@ li span {
     position: fixed;
     right: 20px;
     bottom: 30px;
+}
+
+.modal-content {
+    background-color: #FFF3E4;
+}
+
+.order-image {
+    width: fit-content;
+    height: fit-content;
+    border: solid 2px #6B4F4F;
+    padding: 10px;
+}
+
+.order-image img {
+    width: 200px;
+}
+
+.btn-cancel,
+.btn-cancel:hover {
+    color: #483434;
+    border: 2px solid #483434;
+}
+
+.btn-verifikasi,
+.btn-verifikasi:hover {
+    background-color: #6B4F4F;
+    color: #FFF3E4;
 }
