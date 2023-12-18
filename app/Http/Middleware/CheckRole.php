@@ -20,7 +20,7 @@ class CheckRole
             return $next($request);
         }
 
-        return redirect('/')->with('error', 'Anda bukan admin');
+        return redirect('/');
     }
 
     protected function redirectTo($request)

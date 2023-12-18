@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <h5>Hello, Admin!</h5>
+                        <a href="/" style="text-decoration: none"><h5>Hello, Admin!</h5></a> 
                     </li>
                 </ul>
                 <div class="d-flex">
@@ -23,7 +23,10 @@
                             <a class="nav-link {{ Request::is('admin/completed') ? 'active fw-700' : '' }}" href="/admin/completed">Completed</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Logout</a>
+                            <form action="/logout" method="POST">
+                                    @csrf
+                                    <button class="nav-link" type="submit" href="#">Logout</button>
+                                </form>
                         </li>
                     </ul>
                 </div>

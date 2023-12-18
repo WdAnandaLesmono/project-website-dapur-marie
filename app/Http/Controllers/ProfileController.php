@@ -25,7 +25,27 @@ class ProfileController extends Controller
     {
         $id = Auth::user()->id;
 
-        $product = Order::where('user_id', '=', $id)->with('product')->get();
+        $product = Order::where('user_id', $id)
+            ->where(function ($query) {
+                $query->where('delivery_status', 'Processing')
+                    ->orWhere('delivery_status', 'Being Delivered');
+            })
+            ->with('product')
+            ->get();
+
+        return view('profile', compact('product'), [
+            'title' => 'Profile'
+        ]);
+    }
+
+    public function show_completed()
+    {
+        $id = Auth::user()->id;
+
+        $product = Order::where('user_id', $id)
+            ->where('delivery_status', 'Completed')
+            ->with('product')
+            ->get();
 
         return view('profile', compact('product'), [
             'title' => 'Profile'
