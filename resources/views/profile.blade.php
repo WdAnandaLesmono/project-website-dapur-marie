@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Poppins&display=swap"
         rel="stylesheet">
     {{-- <link rel="stylesheet" href="css/profilestyle.css"> --}}
-    
+
     <link rel="stylesheet" href="/css/{{ request()->segment(1) == 'profile' ? 'profilestyle.css' : '' }}" />
     <link rel="stylesheet" href="/css/{{ request()->segment(2) == 'order' ? 'profilestyle.css' : '' }}" />
 
@@ -59,14 +59,15 @@
         <div class="btn-group">
             <a class="btn {{ Request::is('profile') ? 'active' : '' }}" href="/profile">Carts</a>
             <a class="btn {{ Request::is('profile/order') ? 'active' : '' }}" href="/profile/order">Orders</a>
-            <a class="btn">History</a>
+            <a class="btn {{ Request::is('profile/history') ? 'active' : '' }}" href="/profile/history">History</a>
         </div>
 
         @if ($product->Count() > 0)
             @foreach ($product as $product)
                 <div class="detail-order">
                     <div class="product-detail">
-                        <img src="{{ asset('storage/' . $product->product->image) }}" alt="{{ $product->product->name }}">
+                        <img src="{{ asset('storage/' . $product->product->image) }}"
+                            alt="{{ $product->product->name }}">
                         <div class="m-4">
                             <h5 class="nama-produk"><b>{{ $product->product->name }}</b></h5>
                             <span class="harga">Rp. {{ $product->product->price * $product->quantity }}</span>
@@ -74,7 +75,8 @@
                         </div>
                         <p class="jumlah-order">{{ $product->quantity }}x</p>
                         <div class="trash-logo">
-                            <a href="{{ url('/profile/remove_cart', $product->id) }}"><i class="fa fa-trash fa-2x"></i></a>
+                            <a href="{{ url('/profile/remove_cart', $product->id) }}"><i
+                                    class="fa fa-trash fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +90,7 @@
     </div>
 
     <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
-     @include('sweetalert::alert')
+    @include('sweetalert::alert')
 </body>
 
 </html>

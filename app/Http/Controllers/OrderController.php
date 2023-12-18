@@ -43,6 +43,14 @@ class OrderController extends Controller
         ]);
     }
 
+    public function show_completed()
+    {
+        return view('admin/completed', [
+            'title' => 'Completed',
+            'orders' => Order::all(),
+        ]);
+    }
+
     public function wallet_order(Request $request)
     {
         $user = Auth::user();
@@ -80,5 +88,12 @@ class OrderController extends Controller
         $orderId = $request->input('order_id');
         Order::where('id', $orderId)->update(['delivery_status' => 'Being Delivered']);
         return redirect()->back()->with('success', 'Payment successfully verified, product is in the process of delivery');
+    }
+
+    public function complete_delivery(Request $request)
+    {
+        $orderId = $request->input('order_id');
+        Order::where('id', $orderId)->update(['delivery_status' => 'Completed']);
+        return redirect()->back()->with('success', 'Completed');
     }
 }

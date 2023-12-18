@@ -3,7 +3,7 @@
 @section('body')
     {{-- Card Start --}}
     @foreach ($orders as $order)
-        @if ($order->delivery_status === 'Processing' || $order->delivery_status === 'Being Delivered')
+        @if ($order->delivery_status == 'Completed')
             <div class="container col-8 my-5 px-4 py-3" id="card">
                 <div class="card-body">
                     <div class="row order">
