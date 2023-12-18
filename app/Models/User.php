@@ -57,12 +57,16 @@ class User extends Authenticatable
         return $this->role->name === 'admin';
     }
 
+    public static $isSeeder = false;
+
     protected static function boot()
     {
         parent::boot();
 
-        static::creating(function ($user) {
-            $user->role_id = Role::where('name', 'user')->first()->id;
-        });
+        if (!self::$isSeeder) {
+            static::creating(function ($user) {
+                $user->role_id = 2;
+            });
+        }
     }
 }

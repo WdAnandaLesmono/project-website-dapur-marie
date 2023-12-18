@@ -24,13 +24,13 @@ use Symfony\Component\HttpKernel\Profiler\Profile;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
+Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
-Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', function () {
@@ -50,8 +50,8 @@ Route::get('/profile/order', [ProfileController::class, 'show_order'])->middlewa
 Route::get('/editprofile', [EditProfileController::class, 'index']);
 Route::post('/editprofile', [EditProfileController::class, 'updateUsername']);
 
-Route::get('/admin/orders', [OrderController::class, 'show_order']);
-Route::post('/verify_delivery', [OrderController::class, 'verify_delivery'])->name('verify_delivery');
+Route::get('/admin/orders', [OrderController::class, 'show_order'])->middleware(['auth', 'admin']);
+Route::post('/verify_delivery', [OrderController::class, 'verify_delivery'])->name('verify_delivery')->middleware(['auth', 'admin']);
 Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'admin']);
 
 // Route::post('/editpassword', [EditProfileController::class, 'updatePassword']);

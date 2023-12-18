@@ -156,6 +156,7 @@
                 </div>
                 <form method="POST" enctype="multipart/form-data" action="">
                     <div class="modal-body">
+                        <h5>Dana : 082271041877</h5> <br>
                         @csrf
                         <input type="file" class="form-control-1" id="image" name="image">
                     </div>
