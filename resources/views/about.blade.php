@@ -10,8 +10,8 @@
                 <div class="container m-3">
                     <h1>About</h1>
                     <h5>Contact Person:</h5>
-                    <i class="fa fa-whatsapp fa-2x"></i>
-                    <i class="fa fa-instagram fa-2x"></i>
+                    <a href="https://wa.me/+6282271041877" style="color: black"><i class="fa fa-whatsapp fa-2x"></i></a>
+                    <a href="https://www.instagram.com/wd_ananda" style="color: black"><i class="fa fa-instagram fa-2x"></i></a>
                 </div>
             </div>
             <div class="col pe-5">

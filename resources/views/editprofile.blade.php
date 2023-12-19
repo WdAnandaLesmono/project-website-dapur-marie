@@ -77,32 +77,6 @@
                 </div>
             </div>
 
-            <button class="btn-edit" type="button" data-bs-toggle="modal"
-                data-bs-target="#staticBackdropChangePassword">Change Password</button>
-            <!-- Modal Change password-->
-            <div class="modal fade" id="staticBackdropChangePassword" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <form method="POST" action="">
-                            @csrf
-                            <div class="modal-header border-0">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <input type="password" class="form-control" id="password" name="password"
-                                    value="{{ old('password') ?? '' }}">
-                            </div>
-                            <div class="modal-footer border-0">
-                                <button type="submit" name="editPassword" class="btn-edit">Save changes</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             <button class="btn-edit">Delete Account</button>
         </div>
 

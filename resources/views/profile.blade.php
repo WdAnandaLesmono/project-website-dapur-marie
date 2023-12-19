@@ -83,7 +83,9 @@
             @endforeach
         @else
             <div class="container">
-                <h2 class="text-center mt-5">Your cart is empty</h2>
+                <h2 class="text-center mt-5">{{ Request::is('profile') ? 'Your cart is empty' : '' }}</h2>
+                <h2 class="text-center mt-5">{{ Request::is('profile/order') ? 'No orders yet' : '' }}</h2>
+                <h2 class="text-center mt-5">{{ Request::is('profile/history') ? 'No history yet' : '' }}</h2>
             </div>
         @endif
 
