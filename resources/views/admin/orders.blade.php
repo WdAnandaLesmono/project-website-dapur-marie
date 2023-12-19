@@ -59,7 +59,12 @@
                                 </form>
                             </li>
                             <li class="me-2">
-                                <i class="fa fa-trash fa-2x"></i>
+                                <form method="POST" action="{{ route('cancel_delivery') }}">
+                                    @csrf
+                                    <input type="hidden" name="order_id" value="{{ $order->id }}">
+                                    <button type="submit" name="submit" style="background: none; border: none"><i
+                                            class="fa fa-times fa-2x"></i></button>
+                                </form>
                             </li>
                         </ul>
                     </div>

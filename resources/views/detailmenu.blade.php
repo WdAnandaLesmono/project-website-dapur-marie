@@ -12,13 +12,16 @@
                 <div class="container">
                     <h2 class="title">{{ $product->name }}</h2>
                     <h4>Rp. {{ $product->price }}</h4>
-                    <p>Stock: {{ $product->stock }}</p>
+                    @if ($product->stock > 0)
+                        <p>Stock Available</p>
+                    @else
+                        <p style="color: red">Stock Not Available</p>
+                    @endif
                     <div class="row order mt-5">
                         <form id="addToCart" class="d-flex" method="POST" action="{{ url('add_cart', $product->id) }}">
                             @csrf
-                            <button class="badge badge-order me-3" value="Add To Cart" id="shopping-cart"><i
+                            <button class="badge badge-order me-3" value="Add To Cart" id="shopping-cart" {{ $product->stock > 0 ? '' : 'disabled' }}><i
                                     class="fa fa-shopping-cart fa-2x"></i></button>
-                            <button class="badge badge-order me-4" id="orders">Orders</button>
                             <input type="number" name="quantity" class="badge-order text-center" value="1"
                                 min="1" style="width: 60px">
 

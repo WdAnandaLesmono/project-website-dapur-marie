@@ -3,7 +3,7 @@
 @section('body')
     {{-- Card Start --}}
     @foreach ($orders as $order)
-        @if ($order->delivery_status == 'Completed')
+        @if ($order->delivery_status == 'Completed' || $order->delivery_status == 'Canceled')
             <div class="container col-8 my-5 px-4 py-3" id="card">
                 <div class="card-body">
                     <div class="row order">
@@ -49,17 +49,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="me-2">
-                                <form method="POST" action="{{ route('complete_delivery') }}">
-                                    @csrf
-                                    <input type="hidden" name="order_id" value="{{ $order->id }}">
-                                    <button type="submit" name="submit" style="background: none; border: none"><i
-                                            class="fa fa-check-circle-o fa-2x"></i></button>
-                                </form>
-                            </li>
-                            <li class="me-2">
-                                <i class="fa fa-trash fa-2x"></i>
                             </li>
                         </ul>
                     </div>

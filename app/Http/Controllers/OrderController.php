@@ -96,4 +96,11 @@ class OrderController extends Controller
         Order::where('id', $orderId)->update(['delivery_status' => 'Completed']);
         return redirect()->back()->with('success', 'Completed');
     }
+
+    public function cancel_delivery(Request $request)
+    {
+        $orderId = $request->input('order_id');
+        Order::where('id', $orderId)->update(['delivery_status' => 'Canceled']);
+        return redirect()->back()->with('success', 'Canceled');
+    }
 }
