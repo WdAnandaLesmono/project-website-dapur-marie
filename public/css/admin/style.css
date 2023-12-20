@@ -111,6 +111,16 @@ li span {
     border: 1px solid white;
 }
 
+.category-menu.active {
+    width: 80px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 100;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        border: 1px solid white;
+}
+
 .type {
     list-style-type: none;
     display: flex;

@@ -52,6 +52,7 @@ Route::get('/editprofile', [EditProfileController::class, 'index']);
 Route::post('/editprofile', [EditProfileController::class, 'updateUsername']);
 
 Route::resource('/admin/menu', ProductController::class)->middleware(['auth', 'admin']);
+Route::get('/admin/categories/{category}', [MenuController::class, 'show_admin_category']);
 Route::get('/admin/orders', [OrderController::class, 'show_order'])->middleware(['auth', 'admin']);
 Route::get('/admin/completed', [OrderController::class, 'show_completed'])->middleware(['auth', 'admin']);
 Route::post('/verify_delivery', [OrderController::class, 'verify_delivery'])->name('verify_delivery')->middleware(['auth', 'admin']);
