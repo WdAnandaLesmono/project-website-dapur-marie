@@ -40,7 +40,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/menu', [MenuController::class, 'index']);
-Route::get('/menu/categories/{category}', [CategoryController::class, 'index']);
+Route::get('/menu/categories/{category}', [MenuController::class, 'show_category']);
 Route::get('/menu/detailmenu/{product}', [MenuController::class, 'show'])->middleware('auth');
 
 // Route::get('/profile', [ProfileController::class, 'index']);
