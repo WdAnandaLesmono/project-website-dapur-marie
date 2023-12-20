@@ -26,4 +26,13 @@ class MenuController extends Controller
             'product' => $product,
         ]);
     }
+
+    public function show_category(Category $category)
+    {
+        return view('menu', [
+            'title' => 'Menu',
+            'categories' => Category::all(),
+            'products' => $category->products,
+        ]);
+    }
 }
