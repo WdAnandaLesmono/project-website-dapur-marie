@@ -35,7 +35,7 @@
                         <ul class="dropdown-menu">
                             @if (auth()->user()->role_id == 1)
                             <li>
-                                <a href="admin/menu" class="dropdown-item" style="color: black">Dashboard</a>
+                                <a href="/admin/menu" class="dropdown-item" style="color: black">Dashboard</a>
                             </li>
                             @endif
                             <li>

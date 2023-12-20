@@ -8,12 +8,12 @@
         <div class="container menu-type p-2 mt-2 mb-4 col">
             <ul class="type me-auto mb-2 mb-lg-0">
                 <li class="nav-item me-4">
-                    <a class="badge category-menu" href="#">All</a>
+                    <a class="badge category-menu {{ Request::is('admin/menu') ? 'active' : '' }}" href="/admin/menu">All</a>
                 </li>
                 @foreach ($categories as $category)
                     <li class="nav-item me-4">
-                        <a class="badge category-menu{{ Request::is('admin/menu/categories/' . $category->id) ? 'active' : '' }}"
-                            href="menu/categories/{{ $category->id }}">{{ $category->name }}</a>
+                        <a class="badge category-menu {{ Request::is('admin/categories/' . $category->id) ? 'active' : '' }}"
+                            href="/admin/categories/{{ $category->id }}">{{ $category->name }}</a>
                     </li>
                 @endforeach
             </ul>

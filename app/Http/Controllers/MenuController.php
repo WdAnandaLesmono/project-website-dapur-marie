@@ -35,4 +35,13 @@ class MenuController extends Controller
             'products' => $category->products,
         ]);
     }
+
+    public function show_admin_category(Category $category)
+    {
+        return view('admin.menu.index', [
+            'title' => 'Menu',
+            'categories' => Category::all(),
+            'products' => $category->products,
+        ]);
+    }
 }
