@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <h1 class="nav-link" style="font-family: 'Fraunces', serif;">Profile</h1>
+                        <h1 class="nav-link" style="font-family: 'Fraunces', serif;">My Carts</h1>
                     </li>
                 </ul>
             </div>

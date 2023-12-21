@@ -33,7 +33,7 @@
         <div class="content">
             <div>
                 <div class="add-img">
-                    <i class="fa fa-plus fa-7x"></i>
+                   <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
                 </div>
                 <div class="edit-logo">
                     <i class="fa fa-pencil-square-o"></i>

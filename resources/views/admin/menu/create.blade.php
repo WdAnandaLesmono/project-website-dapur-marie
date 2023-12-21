@@ -32,8 +32,7 @@
         <div class="content">
             <div>
                 <div class="add-img">
-                    <input type="file" id="imageInput" name="image" style="display: none;">
-                    <button id="addImageButton"><i class="fa fa-plus fa-7x"></i></button>
+                     <i class="fa fa-plus fa-7x"></i>
                 </div>
                 <div class="edit-logo">
                     <i class="fa fa-pencil-square-o"></i>
