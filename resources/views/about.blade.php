@@ -16,9 +16,9 @@
             </div>
             <div class="col pe-5">
                 <p>
-                    Dapur marie merupakan sebuah usaha yang menyediakan kue dan snack yang memiliki rasa khas tradisional,
-                    menggunakan bahan-bahan pilihan yang memastikan produk dari dapur marie terjamin halal, nikmat, serta
-                    sehat. dapur marie memproduksi kue barongko dengan rasa khas tradisionalnya, pudding caramel yang
+                    Dapur Marie merupakan sebuah usaha yang menyediakan kue dan snack yang memiliki rasa khas tradisional,
+                    menggunakan bahan-bahan pilihan yang memastikan produk dari Dapur Marie terjamin halal, nikmat, serta
+                    sehat. Dapur Marie memproduksi kue barongko dengan rasa khas tradisionalnya, pudding caramel yang
                     menggugah selera dengan kelembutan dan tampilannya yang menarik, serta kacang telur yang memberikan rasa
                     nostalgia pada momen khusus.
                 </p>
